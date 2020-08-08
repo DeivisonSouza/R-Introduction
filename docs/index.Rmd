@@ -2,7 +2,7 @@
 title: "Linguagem R"
 subtitle: "(Um tutorial para iniciantes)"
 author: "Deivison Venicio Souza"
-institute: "Universidade Federal do Pará, Pará"
+institute: "Universidade Federal do Pará, UFPA"
 date: "2016/12/12 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
