@@ -4,8 +4,10 @@
     <title>Linguagem R</title>
     <meta charset="utf-8" />
     <meta name="author" content="Deivison Venicio Souza" />
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-logo/logo.js"></script>
   </head>
   <body>
     <textarea id="source">
@@ -14,18 +16,125 @@ class: center, middle, inverse, title-slide
 # Linguagem R
 ## (Um tutorial para iniciantes)
 ### Deivison Venicio Souza
-### Universidade Federal do Pará, UFPA
-### 2016/12/12 (updated: 2020-08-08)
+### Universidade Federal do Pará (UFPA)
+### agosto de 2020
 
 ---
 
+
+
+
+<style type="text/css">
+.xaringan-extra-logo {
+  width: 140px;
+  height: 158px;
+  z-index: 0;
+  background-image: url('ufpa.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top:.8em;right:1em;
+}
+</style>
+
+# A linguagem R
+## O que é?
+### Um software estatístico livre
+
+R é um ambiente de software livre de estatística e gráficos, capaz de compilar e executar em uma ampla variedade de plataformas UNIX, Windows e MacOS. Para fazer o download do R, é necessário escolher um **espelho CRAN** (https://cran.r-project.org/) para que seja feito o download da versão mais atual.
+
+--
+
+Os **espelho CRAN** são servidores distribuídos em diversos países que armazenam a linguagem R. Assim, ao deixar escolher de qual servidor será feito o download, permite-se que o usuário defina o servidor mais próximo, reduzindo tempo de tráfego.
+
+---
+&lt;!-- your comment 
+class: center, inverse
+background-image: url("ufpa.png")
+--&gt;
+
+# O RGui
+## &lt;font size="6" face="verdana" color="#008000"&gt; Processo de download e instalação &lt;/font&gt; 
+&lt;br&gt;
+
+&gt;- **1&lt;sup&gt;o&lt;/sup&gt; Passo**: Acessar a página do projeto R em https://www.r-project.org/;
+
+&gt;- **2&lt;sup&gt;o&lt;/sup&gt; Passo**: Do lado esquerdo da página clique sobre o link **CRAN**;
+
+&gt;- **3&lt;sup&gt;o&lt;/sup&gt; Passo**: Será aberta uma página com diversos links de **CRAN Mirrors**, isto é, espelhos CRAN. Veja na tabela 1 os principais espelhos disponíveis no Brasil.
+
+---
+# O RGui
+## &lt;font size="6" face="verdana" color="#008000"&gt; Processo de download e instalação &lt;/font&gt; 
+&lt;br&gt;
+
+
+| ** Link **                          | ** Instituição**                                            |
+| :---------------------------------- | :---------------------------------------------------------- |
+| http://cran-r.c3sl.ufpr.br/         | Universidade Federal do Paraná (UFPR)                       |
+| http://nbcgib.uesc.br/mirrors/cran/ | Center for Comp Biol at Universidade Estadual de Santa Cruz |
+| https://cran.fiocruz.br/            | Oswaldo Cruz Foundation, Rio de Janeiro                     |
+| http://cran.fiocruz.br/             | Oswaldo Cruz Foundation, Rio de Janeiro                     |
+| https://vps.fmvz.usp.br/CRAN/       | University of São Paulo, São Paulo                          |
+| http://brieger.esalq.usp.br/CRAN/   | University of São Paulo, Piracicaba|
+Tabela 1: Espelhos CRAN disponíveis no Brasil.
+
+---
+# O RGui
+## &lt;font size="6" face="verdana" color="#008000"&gt; Processo de download e instalação &lt;/font&gt; 
+&lt;br&gt;
+
+**4&lt;sup&gt;o&lt;/sup&gt; Passo**: Na página http://cran-r.c3sl.ufpr.br/, na seção **Download and Install R**, clicar em um dos três links, conforme o SO do usuário:
+
+1. **Download R for Windows;**
+2. **Download R for Linux; ou**
+3. **Download R for (Mac) OS X.**
+
+---
+# O RGui
+## &lt;font size="6" face="verdana" color="#008000"&gt; Processo de download e instalação &lt;/font&gt; 
+&lt;br&gt;
+
+&gt;- **5&lt;sup&gt;o&lt;/sup&gt; Passo**: Clicar no link do **subdiretório base** ou em **install R for the first time**, para instalar o R pela primeira vez;
+
+&gt;- **6&lt;sup&gt;o&lt;/sup&gt; Passo**: Clicar em **Download R 3.3.2 for Windows**. Assim, será iniciado o download do R Development Core Team para o respectivo sistema; e
+
+&gt;- **7&lt;sup&gt;o&lt;/sup&gt; Passo**: Por fim, basta usar o setup baixado para instalar o programa.
+
+---
+# O RGui
+## &lt;font size="6" face="verdana" color="#008000"&gt; Processo de download e instalação &lt;/font&gt; 
+
+Ao inicializar o **R Development Core Team** pela primeira vez aparecerá a seguinte imagem:
+
+&lt;img src="Img1.png" style=" display: block; margin-left: auto; margin-right: auto;width:600px;height = 4500px;"&gt;&lt;/img&gt;
+
+---
+
+?include_graphics
+# Two-column Layout
+
+.pull-left[
+- One bullet.
+
+- Another bullet.
+]
+
+.pull-right[
+![an image](ufpa.png)
+]
+
+&lt;!-- your comment
+pagedown::chrome_print('https://deivisonsouza.github.io/R-Introduction/')
+--&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
 "highlightLines": true,
-"countIncrementalSlides": false
+"countIncrementalSlides": false,
+"ratio": "16:9"
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));

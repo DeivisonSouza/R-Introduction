@@ -1,0 +1,39 @@
+<style>
+
+<!--
+.logo{
+  background-image: url(ufpa.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 5em;
+  right: 1em;
+  width: 110px;
+  height: 128px;
+  z-index: 0;
+}
+-->
+
+.title-slide {
+	background-color: #fff;
+  background-image: url(ufpa.png);
+	background-position: center bottom 170px;
+	background-size: 30%;
+	border-bottom: 0px solid  #522D80;
+	box-shadow:  0 55px 0 #fff;
+}
+</style>
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    ':not(.title-slide)' +
+    // add additional classes to exclude here, e.g.
+    // ':not(.inverse)' +
+    ':not(.hide-logo)'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="logo"></div>';
+  });
+</script>
