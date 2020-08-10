@@ -105,6 +105,53 @@ Ao inicializar o **R Development Core Team** pela primeira vez aparecerá a segu
 <img src="Img1.png" style=" display: block; margin-left: auto; margin-right: auto;width:600px;height = 4500px;"></img>
 
 ---
+# O RGui
+
+- No contato inicial do usuário com o RGui tem-se a visão do **R Console**.
+- O sinal <font size="4" face="verdana" color="red"> > </font> é o prompt de comando.
+- Execute as funções <font size="4" face="verdana" color="brown"> demo() </font>, <font size="4" face="verdana" color="brown"> help() </font>, <font size="4" face="verdana" color="brown"> help.start() </font>, <font size="4" face="verdana" color="brown"> q() </font>.
+
+<img src="Img1.png" style=" display: block; margin-left: auto; margin-right: auto;width:600px;height = 4500px;"></img>
+
+---
+
+# O RGui
+
+O RGui possui um **R editor**: **Arquivo** $\rightarrow$ **Abrir script**.
+
+<img src="Img2.png" style=" display: block; margin-left: auto; margin-right: auto;width:600px;height = 4500px;"></img>
+
+---
+
+# O editor Rstudio
+## <font size="6" face="verdana" color="#008000"> Processo de download e instalação </font> 
+<br>
+
+>- **1<sup>o</sup> Passo**: Acessar a página do projeto RStudio: https://www.rstudio.com;
+
+>- **2<sup>o</sup> Passo**: Products $\rightarrow$ RStudio;
+
+>- **3<sup>o</sup> Passo**: Selecionar a versão do RStudio para Desktop;
+
+>- **4<sup>o</sup> Passo**: Na edição Open source $\rightarrow$ Download Rstudio Desktop;
+
+>- **5<sup>o</sup> PASSO**: Installers for Supported Platforms $\rightarrow$ instalador RStudio; e
+
+>- **6<sup>o</sup> Passo**: Por fim, basta usar o setup baixado para instalar o programa.
+
+---
+# Como citar o R?
+
+Use a função <font size="4" face="verdana" color="brown"> citation() </font> no prompt de comando. Para saber como citar o R-base pode-se simplesmente fazer:
+
+```{r citar R, collapse=TRUE}
+citation()
+```
+
+---
+
+
+
 
 ?include_graphics
 # Two-column Layout
