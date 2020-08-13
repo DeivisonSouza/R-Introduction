@@ -3,32 +3,60 @@ title: "Linguagem R"
 subtitle: "(Um tutorial para iniciantes)"
 author: "Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
-date: "`r paste(lubridate::month(Sys.Date(), label = TRUE, abbr = FALSE), 'de', lubridate::year(Sys.Date()))`"
+date: |
+  `r format(Sys.Date(),"%d/%B/%Y")` |
+  Altamira, Pará
 #output: revealjs::revealjs_presentation
 #output: rmdshower::shower_presentation
 output:
   xaringan::moon_reader:
     includes:
-      #after_body: insert-logo.html
-    css: [default, metropolis, metropolis-fonts]
+      after_body: my-custom.css
+    css: [default, metropolis, tamu-fonts] #xaringan-themer.css 
     lib_dir: libs
     nature:
-      highlightStyle: github
+      #autoplay: 30000
+      #countdown: 60000
+      #titleSlideClass: [top, left, inverse]
+      highlightStyle: idea #monokai
       highlightLines: true
       countIncrementalSlides: false
       ratio: "16:9"
+    seal: true
 ---
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
 
-```{r xaringan-logo, echo=FALSE}
-xaringanExtra::use_logo(
-  image_url = "ufpa.png",
-  position = xaringanExtra::css_position(top = ".8em", right = "1em"),
+
+```{r xaringanExtra, echo=FALSE}
+library(xaringanExtra)
+use_logo(
+  image_url = "fig/ufpa.png",
+  position = css_position(top = ".8em", right = "1em"),
   width = "140px",
   height = "158px"
+)
+
+use_extra_styles(
+  hover_code_line = TRUE,         #<<
+  mute_unhighlighted_code = TRUE  #<<
+)
+
+use_tachyons()
+use_panelset()
+use_clipboard()
+style_panelset(panel_tab_color_active = "red")
+```
+
+```{r xaringanthemer, warning=FALSE, include=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  base_color = "#43418A",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
 )
 ```
 
@@ -43,6 +71,13 @@ R é um ambiente de software livre de estatística e gráficos, capaz de compila
 Os **espelho CRAN** são servidores distribuídos em diversos países que armazenam a linguagem R. Assim, ao deixar escolher de qual servidor será feito o download, permite-se que o usuário defina o servidor mais próximo, reduzindo tempo de tráfego.
 
 ---
+
+# Por que usar a linguagem R?
+
+* Uma linguagem *open source* (código aberto).
+
+---
+
 <!-- your comment 
 class: center, inverse
 background-image: url("ufpa.png")
@@ -102,7 +137,9 @@ Tabela 1: Espelhos CRAN disponíveis no Brasil.
 
 Ao inicializar o **R Development Core Team** pela primeira vez aparecerá a seguinte imagem:
 
-<img src="Img1.png" style=" display: block; margin-left: auto; margin-right: auto;width:600px;height = 4500px;"></img>
+```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='R Console'}
+knitr::include_graphics('fig/Img1.png')
+```
 
 ---
 # O RGui
@@ -111,7 +148,9 @@ Ao inicializar o **R Development Core Team** pela primeira vez aparecerá a segu
 - O sinal <font size="4" face="verdana" color="red"> > </font> é o prompt de comando.
 - Execute as funções <font size="4" face="verdana" color="brown"> demo() </font>, <font size="4" face="verdana" color="brown"> help() </font>, <font size="4" face="verdana" color="brown"> help.start() </font>, <font size="4" face="verdana" color="brown"> q() </font>.
 
-<img src="Img1.png" style=" display: block; margin-left: auto; margin-right: auto;width:600px;height = 4500px;"></img>
+```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='R Console'}
+knitr::include_graphics('fig/Img1.png')
+```
 
 ---
 
@@ -119,7 +158,9 @@ Ao inicializar o **R Development Core Team** pela primeira vez aparecerá a segu
 
 O RGui possui um **R editor**: **Arquivo** $\rightarrow$ **Abrir script**.
 
-<img src="Img2.png" style=" display: block; margin-left: auto; margin-right: auto;width:600px;height = 4500px;"></img>
+```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='R editor'}
+knitr::include_graphics('fig/Img2.png')
+```
 
 ---
 
@@ -144,11 +185,136 @@ O RGui possui um **R editor**: **Arquivo** $\rightarrow$ **Abrir script**.
 
 Use a função <font size="4" face="verdana" color="brown"> citation() </font> no prompt de comando. Para saber como citar o R-base pode-se simplesmente fazer:
 
-```{r citar R, collapse=TRUE}
+.left-column[
+```{r citeR, echo=TRUE, eval=FALSE}
 citation()
 ```
+]
+
+.right-column[
+```{r ref.label="citeR", highlight.output=c(4:6, 10:17), eval = TRUE, echo = FALSE, collapse=TRUE}
+```
+]
 
 ---
+# Como citar pacotes do R?
+
+.left-column[
+```{r citeGGplot2, echo=TRUE, eval=FALSE}
+citation("ggplot2")
+```
+]
+
+.right-column[
+```{r ref.label="citeGGplot2", highlight.output=c(4:5, 9:16), eval = TRUE, echo = FALSE, collapse=TRUE}
+```
+]
+
+---
+
+# Iniciando no R
+## Operações e operadores aritméticos
+
+A linguagem R permite executar operações aritméticas básica (soma, subtração, multiplicação, divisão e potenciação).
+
+**Operadores** |**Nome**                       |**Operações**
+:-------------:|:-----------------------------:|:-------------:
++              | Somatório                     |2+3           
+*              | Multiplicação                 |4*9
+/              | Divisão                       |20/5
+-              | Subtração                     |32-10
+^ ou **        | Potenciação                   |5^3
+%%             | Resto inteiro da divisão      |10%%3
+%/%            | Parte inteira da divisão      |10%/%3
+Tabela 2: Operações e operadores aritméticos.
+
+---
+
+# Operações e operadores aritméticos
+
+.pull-left[
+```{r refname, echo=TRUE, eval=FALSE}
+2+3
+4*9
+20/5
+32-10
+5^3
+10%%3
+10%/%3
+```
+]
+
+.pull-right[
+```{r ref.label="refname", echo=FALSE, eval=TRUE, collapse=TRUE}
+```
+]
+
+---
+# Operadores lógicos
+
+| **Operadores lógicos**  | **Descrição**                 |
+| :---------------------: | :---------------------------: |
+| <                       | Menor do que...               |
+| >                       | Maior do que...               |
+| <=                      | Menor ou igual do que...      |
+| >=                      | Maior ou igual do que...      |
+| ==                      | Igual a...                    |
+| &                       | E (and)/para vetores          |
+| &&                      | E (and)                       |
+| &#x23ae;                | Ou (or)/para vetores          |
+| &#x23ae;&#x23ae;        | Ou (or)                       |
+| !=                      | Diferente de...               |
+| !                       | Não...                        |
+| is.na()                 | Valor numérico ou faltante... |
+
+---
+# Alguns comandos básicos
+
+| **Comando**                             | **Ação**                                      |
+| :-------------------------------------: | :-------------------------------------------: |
+| q()                                     | Fechar o programa                             |
+| rm(nome do objeto)                      | Remover um objeto qualquer                    |
+| ls()                                    | Listar os objetos na janela de trabalho atual |
+| help(nome da função) ou ?nome da função | Solicitar ajuda sobre o uso de uma função     |
+| save.image()                            | Salvar                                        |
+| Ctrl + L                                | Limpar a tela do R console                    |
+| history(max.show, nrow = 3)             | Listar os últimos 3 comandos executados       |
+| getwd()                                 | Mostrar o diretório de trabalho               |
+| setwd("diretório desejado")             | Mudar o diretório de trabalho                 |
+| install.packages("nome do pacote")      | Instalar um pacote específico                 |
+Tabela 3: Alguns comandos importantes no R.
+---
+
+# Alguns comandos básicos (cont.)
+
+| **Comando**               | **Ação**                                       |
+| :-----------------------: | :--------------------------------------------: |
+| library("nome do pacote") | Carregar um pacote específico                  |
+| dir()                     | Lista os arquivos existentes no diretório      |
+| getOption("OutDec")       | Verificar o separador decimal definido         |
+| options("OutDec=")        | Mudar o separador decimal para vírgula         |
+| round(5.9845, digits=2)  | Função para arredondamento de casas decimais   |
+| data()                    | Lista de data set disponíveis no R             |
+| ?nomedodataset            | Obter informações detalhadas sobre um data set |
+| class(nome do objeto)     | Verifica a classe de um objeto específico      |
+| search()                  | Lista todos os pacotes carregados              |
+Tabela 3: Alguns comandos importantes no R.
+---
+
+class: inverse, center, middle
+
+# Estrutura de dados
+
+![](http://bestanimations.com/Nature/nature-scene-river-animated-gif-2.gif#.XzKd2U9aPGA.link)
+
+---
+.content-box-blue[test] yields
+
+
+---
+
+
+
 
 
 
@@ -170,4 +336,37 @@ citation()
 pagedown::chrome_print('https://deivisonsouza.github.io/R-Introduction/')
 -->
 
+---
 
+.bg-washed-near-white.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+The only way to write good code is to write tons of bad code first. 
+Feeling shame about bad code stops you from getting to good code
+
+.tr[
+— Hadley Wickham
+]]
+
+---
+# Histograma
+
+.panelset[
+.panel[.panel-name[R Code]
+
+```{r panel-chunk, fig.show='hide'}
+hist(mtcars$mpg)
+```
+]
+
+.panel[.panel-name[Plot]
+
+```{r, echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('index_files/figure-html/panel-chunk-1.png')
+```
+
+
+
+]
+]
+
+
+---

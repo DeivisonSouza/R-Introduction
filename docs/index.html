@@ -6,8 +6,16 @@
     <meta name="author" content="Deivison Venicio Souza" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
-    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css/tamu-fonts.css" rel="stylesheet" />
     <script src="libs/xaringanExtra-logo/logo.js"></script>
+    <link href="libs/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
   </head>
   <body>
     <textarea id="source">
@@ -17,9 +25,10 @@ class: center, middle, inverse, title-slide
 ## (Um tutorial para iniciantes)
 ### Deivison Venicio Souza
 ### Universidade Federal do Pará (UFPA)
-### agosto de 2020
+### <p>13/agosto/2020 | Altamira, Pará</p>
 
 ---
+
 
 
 
@@ -29,13 +38,17 @@ class: center, middle, inverse, title-slide
   width: 140px;
   height: 158px;
   z-index: 0;
-  background-image: url('ufpa.png');
+  background-image: url('fig/ufpa.png');
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
   top:.8em;right:1em;
 }
-</style>
+</style><style>.panelset {
+  --panel-tab-color-active: red;
+}</style>
+
+
 
 # A linguagem R
 ## O que é?
@@ -48,6 +61,13 @@ R é um ambiente de software livre de estatística e gráficos, capaz de compila
 Os **espelho CRAN** são servidores distribuídos em diversos países que armazenam a linguagem R. Assim, ao deixar escolher de qual servidor será feito o download, permite-se que o usuário defina o servidor mais próximo, reduzindo tempo de tráfego.
 
 ---
+
+# Por que usar a linguagem R?
+
+* Uma linguagem *open source* (código aberto).
+
+---
+
 &lt;!-- your comment 
 class: center, inverse
 background-image: url("ufpa.png")
@@ -107,7 +127,10 @@ Tabela 1: Espelhos CRAN disponíveis no Brasil.
 
 Ao inicializar o **R Development Core Team** pela primeira vez aparecerá a seguinte imagem:
 
-&lt;img src="Img1.png" style=" display: block; margin-left: auto; margin-right: auto;width:600px;height = 4500px;"&gt;&lt;/img&gt;
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="fig/Img1.png" alt="R Console" width="50%" /&gt;
+&lt;p class="caption"&gt;R Console&lt;/p&gt;
+&lt;/div&gt;
 
 ---
 # O RGui
@@ -116,7 +139,10 @@ Ao inicializar o **R Development Core Team** pela primeira vez aparecerá a segu
 - O sinal &lt;font size="4" face="verdana" color="red"&gt; &gt; &lt;/font&gt; é o prompt de comando.
 - Execute as funções &lt;font size="4" face="verdana" color="brown"&gt; demo() &lt;/font&gt;, &lt;font size="4" face="verdana" color="brown"&gt; help() &lt;/font&gt;, &lt;font size="4" face="verdana" color="brown"&gt; help.start() &lt;/font&gt;, &lt;font size="4" face="verdana" color="brown"&gt; q() &lt;/font&gt;.
 
-&lt;img src="Img1.png" style=" display: block; margin-left: auto; margin-right: auto;width:600px;height = 4500px;"&gt;&lt;/img&gt;
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="fig/Img1.png" alt="R Console" width="50%" /&gt;
+&lt;p class="caption"&gt;R Console&lt;/p&gt;
+&lt;/div&gt;
 
 ---
 
@@ -124,7 +150,10 @@ Ao inicializar o **R Development Core Team** pela primeira vez aparecerá a segu
 
 O RGui possui um **R editor**: **Arquivo** `\(\rightarrow\)` **Abrir script**.
 
-&lt;img src="Img2.png" style=" display: block; margin-left: auto; margin-right: auto;width:600px;height = 4500px;"&gt;&lt;/img&gt;
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="fig/Img2.png" alt="R editor" width="50%" /&gt;
+&lt;p class="caption"&gt;R editor&lt;/p&gt;
+&lt;/div&gt;
 
 ---
 
@@ -149,33 +178,186 @@ O RGui possui um **R editor**: **Arquivo** `\(\rightarrow\)` **Abrir script**.
 
 Use a função &lt;font size="4" face="verdana" color="brown"&gt; citation() &lt;/font&gt; no prompt de comando. Para saber como citar o R-base pode-se simplesmente fazer:
 
+.left-column[
 
 ```r
 citation()
+```
+]
+
+.right-column[
+
+```
 ## 
 ## To cite R in publications use:
 ## 
-##   R Core Team (2020). R: A language and environment for statistical
-##   computing. R Foundation for Statistical Computing, Vienna, Austria.
-##   URL https://www.R-project.org/.
+*##   R Core Team (2020). R: A language and environment for statistical
+*##   computing. R Foundation for Statistical Computing, Vienna, Austria.
+*##   URL https://www.R-project.org/.
 ## 
 ## A BibTeX entry for LaTeX users is
 ## 
-##   @Manual{,
-##     title = {R: A Language and Environment for Statistical Computing},
-##     author = {{R Core Team}},
-##     organization = {R Foundation for Statistical Computing},
-##     address = {Vienna, Austria},
-##     year = {2020},
-##     url = {https://www.R-project.org/},
-##   }
+*##   @Manual{,
+*##     title = {R: A Language and Environment for Statistical Computing},
+*##     author = {{R Core Team}},
+*##     organization = {R Foundation for Statistical Computing},
+*##     address = {Vienna, Austria},
+*##     year = {2020},
+*##     url = {https://www.R-project.org/},
+*##   }
 ## 
 ## We have invested a lot of time and effort in creating R, please cite it
 ## when using it for data analysis. See also 'citation("pkgname")' for
 ## citing R packages.
 ```
+]
 
 ---
+# Como citar pacotes do R?
+
+.left-column[
+
+```r
+citation("ggplot2")
+```
+]
+
+.right-column[
+
+```
+## 
+## To cite ggplot2 in publications, please use:
+## 
+*##   H. Wickham. ggplot2: Elegant Graphics for Data Analysis.
+*##   Springer-Verlag New York, 2016.
+## 
+## A BibTeX entry for LaTeX users is
+## 
+*##   @Book{,
+*##     author = {Hadley Wickham},
+*##     title = {ggplot2: Elegant Graphics for Data Analysis},
+*##     publisher = {Springer-Verlag New York},
+*##     year = {2016},
+*##     isbn = {978-3-319-24277-4},
+*##     url = {https://ggplot2.tidyverse.org},
+*##   }
+```
+]
+
+---
+
+# Iniciando no R
+## Operações e operadores aritméticos
+
+A linguagem R permite executar operações aritméticas básica (soma, subtração, multiplicação, divisão e potenciação).
+
+**Operadores** |**Nome**                       |**Operações**
+:-------------:|:-----------------------------:|:-------------:
++              | Somatório                     |2+3           
+*              | Multiplicação                 |4*9
+/              | Divisão                       |20/5
+-              | Subtração                     |32-10
+^ ou **        | Potenciação                   |5^3
+%%             | Resto inteiro da divisão      |10%%3
+%/%            | Parte inteira da divisão      |10%/%3
+Tabela 2: Operações e operadores aritméticos.
+
+---
+
+# Operações e operadores aritméticos
+
+.pull-left[
+
+```r
+2+3
+4*9
+20/5
+32-10
+5^3
+10%%3
+10%/%3
+```
+]
+
+.pull-right[
+
+```
+## [1] 5
+## [1] 36
+## [1] 4
+## [1] 22
+## [1] 125
+## [1] 1
+## [1] 3
+```
+]
+
+---
+# Operadores lógicos
+
+| **Operadores lógicos**  | **Descrição**                 |
+| :---------------------: | :---------------------------: |
+| &lt;                       | Menor do que...               |
+| &gt;                       | Maior do que...               |
+| &lt;=                      | Menor ou igual do que...      |
+| &gt;=                      | Maior ou igual do que...      |
+| ==                      | Igual a...                    |
+| &amp;                       | E (and)/para vetores          |
+| &amp;&amp;                      | E (and)                       |
+| &amp;#x23ae;                | Ou (or)/para vetores          |
+| &amp;#x23ae;&amp;#x23ae;        | Ou (or)                       |
+| !=                      | Diferente de...               |
+| !                       | Não...                        |
+| is.na()                 | Valor numérico ou faltante... |
+
+---
+# Alguns comandos básicos
+
+| **Comando**                             | **Ação**                                      |
+| :-------------------------------------: | :-------------------------------------------: |
+| q()                                     | Fechar o programa                             |
+| rm(nome do objeto)                      | Remover um objeto qualquer                    |
+| ls()                                    | Listar os objetos na janela de trabalho atual |
+| help(nome da função) ou ?nome da função | Solicitar ajuda sobre o uso de uma função     |
+| save.image()                            | Salvar                                        |
+| Ctrl + L                                | Limpar a tela do R console                    |
+| history(max.show, nrow = 3)             | Listar os últimos 3 comandos executados       |
+| getwd()                                 | Mostrar o diretório de trabalho               |
+| setwd("diretório desejado")             | Mudar o diretório de trabalho                 |
+| install.packages("nome do pacote")      | Instalar um pacote específico                 |
+Tabela 3: Alguns comandos importantes no R.
+---
+
+# Alguns comandos básicos (cont.)
+
+| **Comando**               | **Ação**                                       |
+| :-----------------------: | :--------------------------------------------: |
+| library("nome do pacote") | Carregar um pacote específico                  |
+| dir()                     | Lista os arquivos existentes no diretório      |
+| getOption("OutDec")       | Verificar o separador decimal definido         |
+| options("OutDec=")        | Mudar o separador decimal para vírgula         |
+| round(5.9845, digits=2)  | Função para arredondamento de casas decimais   |
+| data()                    | Lista de data set disponíveis no R             |
+| ?nomedodataset            | Obter informações detalhadas sobre um data set |
+| class(nome do objeto)     | Verifica a classe de um objeto específico      |
+| search()                  | Lista todos os pacotes carregados              |
+Tabela 3: Alguns comandos importantes no R.
+---
+
+class: inverse, center, middle
+
+# Estrutura de dados
+
+![](http://bestanimations.com/Nature/nature-scene-river-animated-gif-2.gif#.XzKd2U9aPGA.link)
+
+---
+.content-box-blue[test] yields
+
+
+---
+
+
+
 
 
 
@@ -196,11 +378,45 @@ citation()
 &lt;!-- your comment
 pagedown::chrome_print('https://deivisonsouza.github.io/R-Introduction/')
 --&gt;
+
+---
+
+.bg-washed-near-white.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+The only way to write good code is to write tons of bad code first. 
+Feeling shame about bad code stops you from getting to good code
+
+.tr[
+— Hadley Wickham
+]]
+
+---
+# Histograma
+
+.panelset[
+.panel[.panel-name[R Code]
+
+
+```r
+hist(mtcars$mpg)
+```
+]
+
+.panel[.panel-name[Plot]
+
+&lt;img src="index_files/figure-html/panel-chunk-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+
+
+]
+]
+
+
+---
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "github",
+"highlightStyle": "idea",
 "highlightLines": true,
 "countIncrementalSlides": false,
 "ratio": "16:9"
@@ -287,6 +503,280 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
+<style>
+.remark-slide-content {
+  background-color: #FAFAFA;
+  /* border-top: 80px solid #23373B;*/
+  border-image: url(fig/black.jpg) 50 round;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 1em 2em 1em 2em;
+}
+
+.title-slide .inverse .remark-slide-content {
+  background-color: #FAFAFA;
+}
+
+.inverse {
+  background-color: #23373B;
+  text-shadow: none;
+}
+
+/* Removes colored bar from top of the slide resulting in a clear slide */
+.clear{
+  border-top: 0px solid #FAFAFA;
+}
+
+h1 {
+  font-weight: normal;
+  margin-top: -95px;
+  margin-left: -00px;
+  color: #FAFAFA;
+}
+
+h2, h3, h4 {
+  padding-top: -15px;
+  padding-bottom: 00px;
+  color: #1A292C;
+  text-shadow: none;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 00px;
+  margin-bottom: -10px;
+}
+
+.remark-slide-content h1 {
+  font-size: 45px;
+}
+
+.remark-slide-content h2 {
+  font-size: 35px;
+}
+
+.remark-slide-content h3 {
+  font-size: 30px;
+}
+
+.left-column h2, .left-column h3, .left-column h4 {
+  color: #777;
+}
+
+.left-column h2:last-of-type, .left-column h3:last-child {
+  color: #1A292C;
+}
+
+.logo {
+  background-image: url(floresta.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  width: 110px;
+  height: 128px;
+  z-index: 0;
+}
+
+.title-slide {
+  background-image: url(fig/black.jpg);
+  border-image: 0px none;
+  background-size: cover;
+  border-top: 0px solid #FAFAFA;
+}
+
+
+.title-slide h1  {
+  color: #ffffff;
+  font-size: 100px;
+  text-shadow: none;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 15px;
+  padding-top: 80px;
+}
+.title-slide h2  {
+  margin-top: -25px;
+  padding-bottom: -20px;
+  color: #ffffff;
+  text-shadow: none;
+  font-weight: 300;
+  font-size: 50px;
+  text-align: left;
+  margin-left: 15px;
+}
+.title-slide h3  {
+  color: #ffffff;
+  text-shadow: none;
+  font-weight: 300;
+  font-size: 35px;
+  text-align: left;
+  margin-left: 15px;
+  margin-bottom: -30px;
+}
+
+hr, .title-slide h2::after, .mline h1::after {
+  content: '';
+  display: block;
+  border: none;
+  background-color: #EB811B;
+  color: #EB811B;
+  height: 1px;
+}
+
+hr, .mline h1::after {
+  margin: 1em 15px 0 15px;
+}
+
+.title-slide h2::after {
+  margin: 10px 15px 35px 0;
+}
+
+.mline h1::after {
+  margin: 10px 15px 0 15px;
+}
+
+.remark-slide-number {
+  font-size: 13pt;
+  color: #272822;
+  opacity: 1;
+}
+.inverse .remark-slide-number {
+  font-size: 13pt;
+  color: #FAFAFA;
+  opacity: 1;
+}
+
+/* turns off slide numbers for title page: https://github.com/gnab/remark/issues/298 */
+.title-slide .remark-slide-number {
+  display: none;
+}
+
+.remark-inline-code {
+  /* background: #F5F5F5; /* lighter */
+  background: #e7e8e2; /* darker */
+  border-radius: 3px;
+  padding: 4px;
+}
+
+.code10 .remark-code {
+  font-size: 10%;
+}
+
+.code20 .remark-code {
+  font-size: 20%;
+}
+
+.code30 .remark-code {
+  font-size: 30%;
+}
+
+.code40 .remark-code {
+  font-size: 40%;
+}
+
+.code50 .remark-code {
+  font-size: 50%;
+}
+
+.code60 .remark-code {
+  font-size: 60%;
+}
+
+.code70 .remark-code {
+  font-size: 70%;
+}
+
+.code80 .remark-code {
+  font-size: 80%;
+}
+
+.code90 .remark-code {
+  font-size: 90%;
+}
+
+.code100 .remark-code {
+  font-size: 100%;
+}
+
+.font10 {
+  font-size: 10%;
+}
+
+.font20 {
+  font-size: 20%;
+}
+
+.font30 {
+  font-size: 30%;
+}
+
+.font40 {
+  font-size: 40%;
+}
+
+.font50 {
+  font-size: 50%;
+}
+
+.font60 {
+  font-size: 60%;
+}
+
+.font70 {
+  font-size: 70%;
+}
+
+.font80 {
+  font-size: 80%;
+}
+
+.font90 {
+  font-size: 90%;
+}
+
+.font100 {
+  font-size: 100%;
+}
+
+.font110 {
+  font-size: 110%;
+}
+
+.font120 {
+  font-size: 120%;
+}
+
+.font130 {
+  font-size: 130%;
+}
+
+.font140 {
+  font-size: 140%;
+}
+
+.font150 {
+  font-size: 150%;
+}
+
+.font160 {
+  font-size: 160%;
+}
+.font170 {
+  font-size: 170%;
+}
+.font180 {
+  font-size: 180%;
+}
+.font190 {
+  font-size: 190%;
+}
+.font200 {
+  font-size: 200%;
+}
+
+
+</style>
 
 <script>
 slideshow._releaseMath = function(el) {
