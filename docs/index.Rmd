@@ -67,8 +67,8 @@ style_mono_accent(
 Parte 1
 - [A linguagem R](#linguagemR)
 - [Por que usar a linguagem R?](#porqueR)
-- [Data Visualization](#viz)
-- [Data Tidying](#tidying)
+- [RGui - Download e instalação](#RGui)
+- [IDE Rstudio - download e instalação](#Rstudio)
 
 Parte 2
 - [Resampling](#resampling)
@@ -95,17 +95,12 @@ name: porqueR
 * Uma linguagem *open source* (código aberto).
 
 
-.footnote[[Conteúdo](#toc)]
+.footnote[[🔙️](#toc)]
+
 ---
+name: RGui
 
-<!-- your comment 
-class: center, inverse
-background-image: url("ufpa.png")
--->
-
-# O RGui
-## <font size="6" face="verdana" color="#008000"> Processo de download e instalação </font> 
-<br>
+# RGui - Download e instalação
 
 >- **1<sup>o</sup> Passo**: Acessar a página do projeto R em https://www.r-project.org/;
 
@@ -115,9 +110,6 @@ background-image: url("ufpa.png")
 
 ---
 # O RGui
-## <font size="6" face="verdana" color="#008000"> Processo de download e instalação </font> 
-<br>
-
 
 | ** Link **                          | ** Instituição**                                            |
 | :---------------------------------- | :---------------------------------------------------------- |
@@ -131,8 +123,6 @@ Tabela 1: Espelhos CRAN disponíveis no Brasil.
 
 ---
 # O RGui
-## <font size="6" face="verdana" color="#008000"> Processo de download e instalação </font> 
-<br>
 
 **4<sup>o</sup> Passo**: Na página http://cran-r.c3sl.ufpr.br/, na seção **Download and Install R**, clicar em um dos três links, conforme o SO do usuário:
 
@@ -142,8 +132,6 @@ Tabela 1: Espelhos CRAN disponíveis no Brasil.
 
 ---
 # O RGui
-## <font size="6" face="verdana" color="#008000"> Processo de download e instalação </font> 
-<br>
 
 >- **5<sup>o</sup> Passo**: Clicar no link do **subdiretório base** ou em **install R for the first time**, para instalar o R pela primeira vez;
 
@@ -153,7 +141,6 @@ Tabela 1: Espelhos CRAN disponíveis no Brasil.
 
 ---
 # O RGui
-## <font size="6" face="verdana" color="#008000"> Processo de download e instalação </font> 
 
 Ao inicializar o **R Development Core Team** pela primeira vez aparecerá a seguinte imagem:
 
@@ -173,7 +160,6 @@ knitr::include_graphics('fig/Img1.png')
 ```
 
 ---
-
 # O RGui
 
 O RGui possui um **R editor**: **Arquivo** $\rightarrow$ **Abrir script**.
@@ -183,10 +169,9 @@ knitr::include_graphics('fig/Img2.png')
 ```
 
 ---
+name: Rstudio
 
-# O editor Rstudio
-## <font size="6" face="verdana" color="#008000"> Processo de download e instalação </font> 
-<br>
+# IDE Rstudio - download e instalação
 
 >- **1<sup>o</sup> Passo**: Acessar a página do projeto RStudio: https://www.rstudio.com;
 
@@ -239,11 +224,9 @@ citation("ggplot2")
 # Iniciando no R
 ## Tipos de operadores
 
-* Na linguagem R existe três tipos principais de operadores: 1) `aritméticos`; 2) `lógicos`; e 3) `comparação (ou relacionais)`. 
+* Na linguagem R existe três tipos principais de operadores: 1) `aritméticos`; 2) `lógicos (ou booleanos)`; e 3) `comparação (ou relacionais)`. 
 
 * Os operadores lógicos e relacionais operam com duas respostas possíveis: `TRUE` (verdadeiro) ou `FALSE` (falso).
-
-* Os operadores aritméticos possibilitam a execução de operações aritméticas básica.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;border-style:solid;border-width:1px;}
@@ -253,12 +236,14 @@ citation("ggplot2")
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-wy0j{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-size:14px;text-align:center;
   vertical-align:middle}
+.tg .tg-baqh{text-align:center;vertical-align:top}
 .tg .tg-thku{background-color:#f9f9f9;border-color:#000000;font-family:Arial, Helvetica, sans-serif !important;;font-size:16px;
   text-align:center;vertical-align:middle}
 .tg .tg-95y4{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-size:14px;font-weight:bold;
   text-align:center;vertical-align:middle}
 .tg .tg-z67g{background-color:#f9f9f9;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-size:14px;
   text-align:center;vertical-align:middle}
+.tg .tg-0lax{text-align:left;vertical-align:top}
 </style>
 <table class="tg">
 <thead>
@@ -322,63 +307,153 @@ citation("ggplot2")
     <td class="tg-z67g">%/%</td>
     <td class="tg-z67g"></td>
     <td class="tg-z67g"></td>
-    <td class="tg-z67g"></td>
-    <td class="tg-z67g"></td>
+    <td class="tg-z67g">Ou exclusivo...</td>
+    <td class="tg-z67g">xor</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-baqh">Contém</td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">%in%</span></td>
   </tr>
 </tbody>
 </table>
 
 ---
-
-**Operadores** |**Nome**                       |**Operações**
-:-------------:|:-----------------------------:|:-------------:
-+              | Somatório                     |2+3           
-*              | Multiplicação                 |4*9
-/              | Divisão                       |20/5
--              | Subtração                     |32-10
-^ ou **        | Potenciação                   |5^3
-%%             | Resto inteiro da divisão      |10%%3
-%/%            | Parte inteira da divisão      |10%/%3
-Tabela 2: Operações e operadores aritméticos.
-
----
-
-# Operações e operadores aritméticos
+# Operadores aritméticos
 
 .pull-left[
 ```{r refname, echo=TRUE, eval=FALSE}
-2+3
-4*9
-20/5
-32-10
-5^3
-10%%3
-10%/%3
+2+3                    # adição
+4*9                    # multiplicação
+20/5                   # divisão
+32-10                  # subtração
+5^3                    # potenciação
+10%%3                  # resto da divisão
+10%/%3                 # Parte inteira da divisão
 ```
+
+```{r refname2, echo=TRUE, eval=FALSE}
+(2+3)*10
+4*3**3
+
+```
+
 ]
 
 .pull-right[
 ```{r ref.label="refname", echo=FALSE, eval=TRUE, collapse=TRUE}
 ```
+
+```{r ref.label="refname2", echo=FALSE, eval=TRUE, collapse=TRUE}
+```
+
+]
+
+---
+# Operadores relacionais (ou comparação)
+
+.pull-left[
+```{r logVar, echo=TRUE, eval=FALSE}
+# criando variáveis "x", "y" e "v"
+(x <- 20)
+(y <- 10)
+(v <- 1)
+
+# criando dois vetores: "z" e "w"
+(z <- c(1:5))
+(w <- c(5:1))
+```
+
+```{r logname, echo=TRUE, eval=FALSE}
+x > y        # x é maior do que y?
+x < y        # x é menor do que y?
+x != y       # x é diferente de y?
+y <= x       # y é menor ou igual a x?
+y >= x       # y é maior ou igual a x?
+z >= w       # elementos de z são >= aos de w?
+w >= z       # elementos de w são >= aos de z?
+z == w       # elementos de z são iguais aos de w?
+z != w       # elementos de z são dif. aos de w?
+x >= w       # x é >= aos elementos de w?
+w %in% v     # w contém v?
+```
+]
+
+.pull-right[
+```{r ref.label="logVar", echo=FALSE, eval=TRUE, collapse=T}
+```
+<br>
+<br>
+
+```{r ref.label="logname", echo=FALSE, eval=TRUE, collapse=T}
+```
+
 ]
 
 ---
 # Operadores lógicos
 
-| **Operadores lógicos**  | **Descrição**                 |
-| :---------------------: | :---------------------------: |
-| <                       | Menor do que...               |
-| >                       | Maior do que...               |
-| <=                      | Menor ou igual do que...      |
-| >=                      | Maior ou igual do que...      |
-| ==                      | Igual a...                    |
-| &                       | E (and)/para vetores          |
-| &&                      | E (and)                       |
-| &#x23ae;                | Ou (or)/para vetores          |
-| &#x23ae;&#x23ae;        | Ou (or)                       |
-| !=                      | Diferente de...               |
-| !                       | Não...                        |
-| is.na()                 | Valor numérico ou faltante... |
+
+---
+# Funções matemáticas usuais
+
+A linguagem R dispõe de funções matemáticas usualmente encontradas em calculadoras científicas.
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;border-style:solid;border-width:1px;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:0px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:0px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-iog8{background-color:#f9f9f9;font-family:Arial, Helvetica, sans-serif !important;;font-size:20px;text-align:center;
+  vertical-align:middle}
+.tg .tg-f955{font-family:Arial, Helvetica, sans-serif !important;;font-size:20px;text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-f955"><span style="font-weight:bold">Função</span></th>
+    <th class="tg-f955"><span style="font-weight:bold">Descrição</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-iog8">sqrt()</td>
+    <td class="tg-iog8">Raiz quadrada</td>
+  </tr>
+  <tr>
+    <td class="tg-f955">abs()</td>
+    <td class="tg-f955">Valor absoluto</td>
+  </tr>
+  <tr>
+    <td class="tg-iog8">sin(); cos(); tan()</td>
+    <td class="tg-iog8">Funções trigonométricas</td>
+  </tr>
+  <tr>
+    <td class="tg-f955">asin(); acos(); atan()</td>
+    <td class="tg-f955">Funções trigonométricas inversas</td>
+  </tr>
+  <tr>
+    <td class="tg-iog8">exp()</td>
+    <td class="tg-iog8">Exponencial</td>
+  </tr>
+  <tr>
+    <td class="tg-f955">log10()</td>
+    <td class="tg-f955">Logarítmo na base 10</td>
+  </tr>
+  <tr>
+    <td class="tg-iog8">log()</td>
+    <td class="tg-iog8">Logarítmo natural</td>
+  </tr>
+  <tr>
+    <td class="tg-f955">factorial</td>
+    <td class="tg-f955">Fatorial</td>
+  </tr>
+</tbody>
+</table>
 
 ---
 # Alguns comandos básicos

@@ -56,8 +56,8 @@ name: toc
 Parte 1
 - [A linguagem R](#linguagemR)
 - [Por que usar a linguagem R?](#porqueR)
-- [Data Visualization](#viz)
-- [Data Tidying](#tidying)
+- [RGui - Download e instalação](#RGui)
+- [IDE Rstudio - download e instalação](#Rstudio)
 
 Parte 2
 - [Resampling](#resampling)
@@ -84,17 +84,12 @@ name: porqueR
 * Uma linguagem *open source* (código aberto).
 
 
-.footnote[[Conteúdo](#toc)]
+.footnote[[🔙️](#toc)]
+
 ---
+name: RGui
 
-&lt;!-- your comment 
-class: center, inverse
-background-image: url("ufpa.png")
---&gt;
-
-# O RGui
-## &lt;font size="6" face="verdana" color="#008000"&gt; Processo de download e instalação &lt;/font&gt; 
-&lt;br&gt;
+# RGui - Download e instalação
 
 &gt;- **1&lt;sup&gt;o&lt;/sup&gt; Passo**: Acessar a página do projeto R em https://www.r-project.org/;
 
@@ -104,9 +99,6 @@ background-image: url("ufpa.png")
 
 ---
 # O RGui
-## &lt;font size="6" face="verdana" color="#008000"&gt; Processo de download e instalação &lt;/font&gt; 
-&lt;br&gt;
-
 
 | ** Link **                          | ** Instituição**                                            |
 | :---------------------------------- | :---------------------------------------------------------- |
@@ -120,8 +112,6 @@ Tabela 1: Espelhos CRAN disponíveis no Brasil.
 
 ---
 # O RGui
-## &lt;font size="6" face="verdana" color="#008000"&gt; Processo de download e instalação &lt;/font&gt; 
-&lt;br&gt;
 
 **4&lt;sup&gt;o&lt;/sup&gt; Passo**: Na página http://cran-r.c3sl.ufpr.br/, na seção **Download and Install R**, clicar em um dos três links, conforme o SO do usuário:
 
@@ -131,8 +121,6 @@ Tabela 1: Espelhos CRAN disponíveis no Brasil.
 
 ---
 # O RGui
-## &lt;font size="6" face="verdana" color="#008000"&gt; Processo de download e instalação &lt;/font&gt; 
-&lt;br&gt;
 
 &gt;- **5&lt;sup&gt;o&lt;/sup&gt; Passo**: Clicar no link do **subdiretório base** ou em **install R for the first time**, para instalar o R pela primeira vez;
 
@@ -142,7 +130,6 @@ Tabela 1: Espelhos CRAN disponíveis no Brasil.
 
 ---
 # O RGui
-## &lt;font size="6" face="verdana" color="#008000"&gt; Processo de download e instalação &lt;/font&gt; 
 
 Ao inicializar o **R Development Core Team** pela primeira vez aparecerá a seguinte imagem:
 
@@ -164,7 +151,6 @@ Ao inicializar o **R Development Core Team** pela primeira vez aparecerá a segu
 &lt;/div&gt;
 
 ---
-
 # O RGui
 
 O RGui possui um **R editor**: **Arquivo** `\(\rightarrow\)` **Abrir script**.
@@ -175,10 +161,9 @@ O RGui possui um **R editor**: **Arquivo** `\(\rightarrow\)` **Abrir script**.
 &lt;/div&gt;
 
 ---
+name: Rstudio
 
-# O editor Rstudio
-## &lt;font size="6" face="verdana" color="#008000"&gt; Processo de download e instalação &lt;/font&gt; 
-&lt;br&gt;
+# IDE Rstudio - download e instalação
 
 &gt;- **1&lt;sup&gt;o&lt;/sup&gt; Passo**: Acessar a página do projeto RStudio: https://www.rstudio.com;
 
@@ -270,11 +255,9 @@ citation("ggplot2")
 # Iniciando no R
 ## Tipos de operadores
 
-* Na linguagem R existe três tipos principais de operadores: 1) `aritméticos`; 2) `lógicos`; e 3) `comparação (ou relacionais)`. 
+* Na linguagem R existe três tipos principais de operadores: 1) `aritméticos`; 2) `lógicos (ou booleanos)`; e 3) `comparação (ou relacionais)`. 
 
 * Os operadores lógicos e relacionais operam com duas respostas possíveis: `TRUE` (verdadeiro) ou `FALSE` (falso).
-
-* Os operadores aritméticos possibilitam a execução de operações aritméticas básica.
 
 &lt;style type="text/css"&gt;
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;border-style:solid;border-width:1px;}
@@ -284,12 +267,14 @@ citation("ggplot2")
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-wy0j{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-size:14px;text-align:center;
   vertical-align:middle}
+.tg .tg-baqh{text-align:center;vertical-align:top}
 .tg .tg-thku{background-color:#f9f9f9;border-color:#000000;font-family:Arial, Helvetica, sans-serif !important;;font-size:16px;
   text-align:center;vertical-align:middle}
 .tg .tg-95y4{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-size:14px;font-weight:bold;
   text-align:center;vertical-align:middle}
 .tg .tg-z67g{background-color:#f9f9f9;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-size:14px;
   text-align:center;vertical-align:middle}
+.tg .tg-0lax{text-align:left;vertical-align:top}
 &lt;/style&gt;
 &lt;table class="tg"&gt;
 &lt;thead&gt;
@@ -353,40 +338,41 @@ citation("ggplot2")
     &lt;td class="tg-z67g"&gt;%/%&lt;/td&gt;
     &lt;td class="tg-z67g"&gt;&lt;/td&gt;
     &lt;td class="tg-z67g"&gt;&lt;/td&gt;
-    &lt;td class="tg-z67g"&gt;&lt;/td&gt;
-    &lt;td class="tg-z67g"&gt;&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;Ou exclusivo...&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;xor&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-0lax"&gt;&lt;/td&gt;
+    &lt;td class="tg-0lax"&gt;&lt;/td&gt;
+    &lt;td class="tg-0lax"&gt;&lt;/td&gt;
+    &lt;td class="tg-0lax"&gt;&lt;/td&gt;
+    &lt;td class="tg-baqh"&gt;Contém&lt;/td&gt;
+    &lt;td class="tg-0lax"&gt;&lt;span style="font-weight:400;font-style:normal"&gt;%in%&lt;/span&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
 ---
-
-**Operadores** |**Nome**                       |**Operações**
-:-------------:|:-----------------------------:|:-------------:
-+              | Somatório                     |2+3           
-*              | Multiplicação                 |4*9
-/              | Divisão                       |20/5
--              | Subtração                     |32-10
-^ ou **        | Potenciação                   |5^3
-%%             | Resto inteiro da divisão      |10%%3
-%/%            | Parte inteira da divisão      |10%/%3
-Tabela 2: Operações e operadores aritméticos.
-
----
-
-# Operações e operadores aritméticos
+# Operadores aritméticos
 
 .pull-left[
 
 ```r
-2+3
-4*9
-20/5
-32-10
-5^3
-10%%3
-10%/%3
+2+3                    # adição
+4*9                    # multiplicação
+20/5                   # divisão
+32-10                  # subtração
+5^3                    # potenciação
+10%%3                  # resto da divisão
+10%/%3                 # Parte inteira da divisão
 ```
+
+
+```r
+(2+3)*10
+4*3**3
+```
+
 ]
 
 .pull-right[
@@ -400,25 +386,137 @@ Tabela 2: Operações e operadores aritméticos.
 ## [1] 1
 ## [1] 3
 ```
+
+
+```
+## [1] 50
+## [1] 108
+```
+
+]
+
+---
+# Operadores relacionais (ou comparação)
+
+.pull-left[
+
+```r
+# criando variáveis "x", "y" e "v"
+(x &lt;- 20)
+(y &lt;- 10)
+(v &lt;- 1)
+
+# criando dois vetores: "z" e "w"
+(z &lt;- c(1:5))
+(w &lt;- c(5:1))
+```
+
+
+```r
+x &gt; y        # x é maior do que y?
+x &lt; y        # x é menor do que y?
+x != y       # x é diferente de y?
+y &lt;= x       # y é menor ou igual a x?
+y &gt;= x       # y é maior ou igual a x?
+z &gt;= w       # elementos de z são &gt;= aos de w?
+w &gt;= z       # elementos de w são &gt;= aos de z?
+z == w       # elementos de z são iguais aos de w?
+z != w       # elementos de z são dif. aos de w?
+x &gt;= w       # x é &gt;= aos elementos de w?
+w %in% v     # w contém v?
+```
+]
+
+.pull-right[
+
+```
+## [1] 20
+## [1] 10
+## [1] 1
+## [1] 1 2 3 4 5
+## [1] 5 4 3 2 1
+```
+&lt;br&gt;
+&lt;br&gt;
+
+
+```
+## [1] TRUE
+## [1] FALSE
+## [1] TRUE
+## [1] TRUE
+## [1] FALSE
+## [1] FALSE FALSE  TRUE  TRUE  TRUE
+## [1]  TRUE  TRUE  TRUE FALSE FALSE
+## [1] FALSE FALSE  TRUE FALSE FALSE
+## [1]  TRUE  TRUE FALSE  TRUE  TRUE
+## [1] TRUE TRUE TRUE TRUE TRUE
+## [1] FALSE FALSE FALSE FALSE  TRUE
+```
+
 ]
 
 ---
 # Operadores lógicos
 
-| **Operadores lógicos**  | **Descrição**                 |
-| :---------------------: | :---------------------------: |
-| &lt;                       | Menor do que...               |
-| &gt;                       | Maior do que...               |
-| &lt;=                      | Menor ou igual do que...      |
-| &gt;=                      | Maior ou igual do que...      |
-| ==                      | Igual a...                    |
-| &amp;                       | E (and)/para vetores          |
-| &amp;&amp;                      | E (and)                       |
-| &amp;#x23ae;                | Ou (or)/para vetores          |
-| &amp;#x23ae;&amp;#x23ae;        | Ou (or)                       |
-| !=                      | Diferente de...               |
-| !                       | Não...                        |
-| is.na()                 | Valor numérico ou faltante... |
+
+---
+# Funções matemáticas usuais
+
+A linguagem R dispõe de funções matemáticas usualmente encontradas em calculadoras científicas.
+
+&lt;style type="text/css"&gt;
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;border-style:solid;border-width:1px;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:0px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:0px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-iog8{background-color:#f9f9f9;font-family:Arial, Helvetica, sans-serif !important;;font-size:20px;text-align:center;
+  vertical-align:middle}
+.tg .tg-f955{font-family:Arial, Helvetica, sans-serif !important;;font-size:20px;text-align:center;vertical-align:middle}
+&lt;/style&gt;
+&lt;table class="tg"&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th class="tg-f955"&gt;&lt;span style="font-weight:bold"&gt;Função&lt;/span&gt;&lt;/th&gt;
+    &lt;th class="tg-f955"&gt;&lt;span style="font-weight:bold"&gt;Descrição&lt;/span&gt;&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-iog8"&gt;sqrt()&lt;/td&gt;
+    &lt;td class="tg-iog8"&gt;Raiz quadrada&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-f955"&gt;abs()&lt;/td&gt;
+    &lt;td class="tg-f955"&gt;Valor absoluto&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-iog8"&gt;sin(); cos(); tan()&lt;/td&gt;
+    &lt;td class="tg-iog8"&gt;Funções trigonométricas&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-f955"&gt;asin(); acos(); atan()&lt;/td&gt;
+    &lt;td class="tg-f955"&gt;Funções trigonométricas inversas&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-iog8"&gt;exp()&lt;/td&gt;
+    &lt;td class="tg-iog8"&gt;Exponencial&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-f955"&gt;log10()&lt;/td&gt;
+    &lt;td class="tg-f955"&gt;Logarítmo na base 10&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-iog8"&gt;log()&lt;/td&gt;
+    &lt;td class="tg-iog8"&gt;Logarítmo natural&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-f955"&gt;factorial&lt;/td&gt;
+    &lt;td class="tg-f955"&gt;Fatorial&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 ---
 # Alguns comandos básicos
@@ -768,9 +866,10 @@ hr, .mline h1::after {
 
 .footnote {
     position: absolute;
-    bottom: 3em;
-    padding-right: 4em;
-    font-size: 90%;
+    bottom: .5em;
+    padding-left: 10px;
+    font-size: 150%;
+    text-align: left;
 }
 
 .fancy {
