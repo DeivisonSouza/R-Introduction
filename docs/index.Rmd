@@ -1,6 +1,6 @@
 ---
-title: "Linguagem R"
-subtitle: "(Um tutorial para iniciantes)"
+title: "Linguagem de programação R"
+subtitle: "(Uma introdução para iniciantes)"
 author: "Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
 date: |
@@ -20,15 +20,17 @@ output:
       #titleSlideClass: [top, left, inverse]
       highlightStyle: idea #monokai
       highlightLines: true
+      highlightLanguage: r
       countIncrementalSlides: false
       ratio: "16:9"
     seal: true
 ---
 
+name: toc
+
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
-
 
 ```{r xaringanExtra, echo=FALSE}
 library(xaringanExtra)
@@ -36,7 +38,7 @@ use_logo(
   image_url = "fig/ufpa.png",
   position = css_position(top = ".8em", right = "1em"),
   width = "140px",
-  height = "158px"
+  height = "140px"
 )
 
 use_extra_styles(
@@ -60,6 +62,21 @@ style_mono_accent(
 )
 ```
 
+# Conteúdo
+
+Parte 1
+- [A linguagem R](#linguagemR)
+- [Por que usar a linguagem R?](#porqueR)
+- [Data Visualization](#viz)
+- [Data Tidying](#tidying)
+
+Parte 2
+- [Resampling](#resampling)
+- [Inference](#inference)
+
+---
+name: linguagemR
+
 # A linguagem R
 ## O que é?
 ### Um software estatístico livre
@@ -71,11 +88,14 @@ R é um ambiente de software livre de estatística e gráficos, capaz de compila
 Os **espelho CRAN** são servidores distribuídos em diversos países que armazenam a linguagem R. Assim, ao deixar escolher de qual servidor será feito o download, permite-se que o usuário defina o servidor mais próximo, reduzindo tempo de tráfego.
 
 ---
+name: porqueR
 
 # Por que usar a linguagem R?
 
 * Uma linguagem *open source* (código aberto).
 
+
+.footnote[[Conteúdo](#toc)]
 ---
 
 <!-- your comment 
@@ -180,8 +200,12 @@ knitr::include_graphics('fig/Img2.png')
 
 >- **6<sup>o</sup> Passo**: Por fim, basta usar o setup baixado para instalar o programa.
 
+```{r, echo=FALSE, out.width='30%', fig.align='center', fig.cap=''}
+knitr::include_graphics('fig/RStudio.png')
+```
+
 ---
-# Como citar o R?
+# Como citar o R? <span style='font-size:50px;'>&#129300;</span>
 
 Use a função <font size="4" face="verdana" color="brown"> citation() </font> no prompt de comando. Para saber como citar o R-base pode-se simplesmente fazer:
 
@@ -197,7 +221,7 @@ citation()
 ]
 
 ---
-# Como citar pacotes do R?
+# Como citar pacotes do R? <span style='font-size:50px;'>&#129300;</span>
 
 .left-column[
 ```{r citeGGplot2, echo=TRUE, eval=FALSE}
@@ -213,9 +237,98 @@ citation("ggplot2")
 ---
 
 # Iniciando no R
-## Operações e operadores aritméticos
+## Tipos de operadores
 
-A linguagem R permite executar operações aritméticas básica (soma, subtração, multiplicação, divisão e potenciação).
+* Na linguagem R existe três tipos principais de operadores: 1) `aritméticos`; 2) `lógicos`; e 3) `comparação (ou relacionais)`. 
+
+* Os operadores lógicos e relacionais operam com duas respostas possíveis: `TRUE` (verdadeiro) ou `FALSE` (falso).
+
+* Os operadores aritméticos possibilitam a execução de operações aritméticas básica.
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;border-style:solid;border-width:1px;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:0px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:0px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-wy0j{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-size:14px;text-align:center;
+  vertical-align:middle}
+.tg .tg-thku{background-color:#f9f9f9;border-color:#000000;font-family:Arial, Helvetica, sans-serif !important;;font-size:16px;
+  text-align:center;vertical-align:middle}
+.tg .tg-95y4{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-size:14px;font-weight:bold;
+  text-align:center;vertical-align:middle}
+.tg .tg-z67g{background-color:#f9f9f9;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-size:14px;
+  text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-95y4" colspan="2">Aritméticos</th>
+    <th class="tg-95y4" colspan="2">Lógicos</th>
+    <th class="tg-95y4" colspan="2">Relacionais</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-z67g">Adição</td>
+    <td class="tg-z67g">+</td>
+    <td class="tg-z67g">E (and)/para vetores</td>
+    <td class="tg-z67g">&amp;</td>
+    <td class="tg-z67g">Menor do que...</td>
+    <td class="tg-z67g">&lt;</td>
+  </tr>
+  <tr>
+    <td class="tg-wy0j">Subtração</td>
+    <td class="tg-wy0j">-</td>
+    <td class="tg-wy0j">E (and) </td>
+    <td class="tg-wy0j">&amp;&amp;</td>
+    <td class="tg-wy0j">Maior do que...</td>
+    <td class="tg-wy0j">&gt;</td>
+  </tr>
+  <tr>
+    <td class="tg-z67g">Multiplicação</td>
+    <td class="tg-z67g">*</td>
+    <td class="tg-z67g">Ou (or)/para vetores</td>
+    <td class="tg-z67g">⎮</td>
+    <td class="tg-z67g">Menor ou igual do que...</td>
+    <td class="tg-z67g">&lt;=</td>
+  </tr>
+  <tr>
+    <td class="tg-wy0j">Divisão</td>
+    <td class="tg-wy0j">/</td>
+    <td class="tg-wy0j">Ou (or)</td>
+    <td class="tg-wy0j">⎮⎮</td>
+    <td class="tg-wy0j">Maior ou igual do que...</td>
+    <td class="tg-wy0j">&gt;=</td>
+  </tr>
+  <tr>
+    <td class="tg-z67g">Potenciação</td>
+    <td class="tg-z67g">^ ou **</td>
+    <td class="tg-z67g">Não...</td>
+    <td class="tg-z67g">!</td>
+    <td class="tg-z67g">Igual a...</td>
+    <td class="tg-thku">==</td>
+  </tr>
+  <tr>
+    <td class="tg-wy0j">Resto da divisão</td>
+    <td class="tg-wy0j">%%</td>
+    <td class="tg-wy0j"></td>
+    <td class="tg-wy0j"></td>
+    <td class="tg-wy0j">Diferente de...</td>
+    <td class="tg-wy0j">!=</td>
+  </tr>
+  <tr>
+    <td class="tg-z67g">Parte inteira da divisão</td>
+    <td class="tg-z67g">%/%</td>
+    <td class="tg-z67g"></td>
+    <td class="tg-z67g"></td>
+    <td class="tg-z67g"></td>
+    <td class="tg-z67g"></td>
+  </tr>
+</tbody>
+</table>
+
+---
 
 **Operadores** |**Nome**                       |**Operações**
 :-------------:|:-----------------------------:|:-------------:

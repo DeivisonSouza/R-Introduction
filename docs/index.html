@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Linguagem R</title>
+    <title>Linguagem de programação R</title>
     <meta charset="utf-8" />
     <meta name="author" content="Deivison Venicio Souza" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
@@ -21,8 +21,8 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Linguagem R
-## (Um tutorial para iniciantes)
+# Linguagem de programação R
+## (Uma introdução para iniciantes)
 ### Deivison Venicio Souza
 ### Universidade Federal do Pará (UFPA)
 ### <p>14/agosto/2020 | Altamira, Pará</p>
@@ -30,13 +30,14 @@ class: center, middle, inverse, title-slide
 ---
 
 
+name: toc
 
 
 
 <style type="text/css">
 .xaringan-extra-logo {
   width: 140px;
-  height: 158px;
+  height: 140px;
   z-index: 0;
   background-image: url('fig/ufpa.png');
   background-size: contain;
@@ -50,6 +51,21 @@ class: center, middle, inverse, title-slide
 
 
 
+# Conteúdo
+
+Parte 1
+- [A linguagem R](#linguagemR)
+- [Por que usar a linguagem R?](#porqueR)
+- [Data Visualization](#viz)
+- [Data Tidying](#tidying)
+
+Parte 2
+- [Resampling](#resampling)
+- [Inference](#inference)
+
+---
+name: linguagemR
+
 # A linguagem R
 ## O que é?
 ### Um software estatístico livre
@@ -61,11 +77,14 @@ R é um ambiente de software livre de estatística e gráficos, capaz de compila
 Os **espelho CRAN** são servidores distribuídos em diversos países que armazenam a linguagem R. Assim, ao deixar escolher de qual servidor será feito o download, permite-se que o usuário defina o servidor mais próximo, reduzindo tempo de tráfego.
 
 ---
+name: porqueR
 
 # Por que usar a linguagem R?
 
 * Uma linguagem *open source* (código aberto).
 
+
+.footnote[[Conteúdo](#toc)]
 ---
 
 &lt;!-- your comment 
@@ -173,8 +192,10 @@ O RGui possui um **R editor**: **Arquivo** `\(\rightarrow\)` **Abrir script**.
 
 &gt;- **6&lt;sup&gt;o&lt;/sup&gt; Passo**: Por fim, basta usar o setup baixado para instalar o programa.
 
+&lt;img src="fig/RStudio.png" width="30%" style="display: block; margin: auto;" /&gt;
+
 ---
-# Como citar o R?
+# Como citar o R? &lt;span style='font-size:50px;'&gt;&amp;#129300;&lt;/span&gt;
 
 Use a função &lt;font size="4" face="verdana" color="brown"&gt; citation() &lt;/font&gt; no prompt de comando. Para saber como citar o R-base pode-se simplesmente fazer:
 
@@ -213,7 +234,7 @@ citation()
 ]
 
 ---
-# Como citar pacotes do R?
+# Como citar pacotes do R? &lt;span style='font-size:50px;'&gt;&amp;#129300;&lt;/span&gt;
 
 .left-column[
 
@@ -247,9 +268,98 @@ citation("ggplot2")
 ---
 
 # Iniciando no R
-## Operações e operadores aritméticos
+## Tipos de operadores
 
-A linguagem R permite executar operações aritméticas básica (soma, subtração, multiplicação, divisão e potenciação).
+* Na linguagem R existe três tipos principais de operadores: 1) `aritméticos`; 2) `lógicos`; e 3) `comparação (ou relacionais)`. 
+
+* Os operadores lógicos e relacionais operam com duas respostas possíveis: `TRUE` (verdadeiro) ou `FALSE` (falso).
+
+* Os operadores aritméticos possibilitam a execução de operações aritméticas básica.
+
+&lt;style type="text/css"&gt;
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;border-style:solid;border-width:1px;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:0px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:0px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-wy0j{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-size:14px;text-align:center;
+  vertical-align:middle}
+.tg .tg-thku{background-color:#f9f9f9;border-color:#000000;font-family:Arial, Helvetica, sans-serif !important;;font-size:16px;
+  text-align:center;vertical-align:middle}
+.tg .tg-95y4{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-size:14px;font-weight:bold;
+  text-align:center;vertical-align:middle}
+.tg .tg-z67g{background-color:#f9f9f9;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-size:14px;
+  text-align:center;vertical-align:middle}
+&lt;/style&gt;
+&lt;table class="tg"&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th class="tg-95y4" colspan="2"&gt;Aritméticos&lt;/th&gt;
+    &lt;th class="tg-95y4" colspan="2"&gt;Lógicos&lt;/th&gt;
+    &lt;th class="tg-95y4" colspan="2"&gt;Relacionais&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-z67g"&gt;Adição&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;+&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;E (and)/para vetores&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;&amp;amp;&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;Menor do que...&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;&amp;lt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-wy0j"&gt;Subtração&lt;/td&gt;
+    &lt;td class="tg-wy0j"&gt;-&lt;/td&gt;
+    &lt;td class="tg-wy0j"&gt;E (and) &lt;/td&gt;
+    &lt;td class="tg-wy0j"&gt;&amp;amp;&amp;amp;&lt;/td&gt;
+    &lt;td class="tg-wy0j"&gt;Maior do que...&lt;/td&gt;
+    &lt;td class="tg-wy0j"&gt;&amp;gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-z67g"&gt;Multiplicação&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;*&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;Ou (or)/para vetores&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;⎮&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;Menor ou igual do que...&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;&amp;lt;=&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-wy0j"&gt;Divisão&lt;/td&gt;
+    &lt;td class="tg-wy0j"&gt;/&lt;/td&gt;
+    &lt;td class="tg-wy0j"&gt;Ou (or)&lt;/td&gt;
+    &lt;td class="tg-wy0j"&gt;⎮⎮&lt;/td&gt;
+    &lt;td class="tg-wy0j"&gt;Maior ou igual do que...&lt;/td&gt;
+    &lt;td class="tg-wy0j"&gt;&amp;gt;=&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-z67g"&gt;Potenciação&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;^ ou **&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;Não...&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;!&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;Igual a...&lt;/td&gt;
+    &lt;td class="tg-thku"&gt;==&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-wy0j"&gt;Resto da divisão&lt;/td&gt;
+    &lt;td class="tg-wy0j"&gt;%%&lt;/td&gt;
+    &lt;td class="tg-wy0j"&gt;&lt;/td&gt;
+    &lt;td class="tg-wy0j"&gt;&lt;/td&gt;
+    &lt;td class="tg-wy0j"&gt;Diferente de...&lt;/td&gt;
+    &lt;td class="tg-wy0j"&gt;!=&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-z67g"&gt;Parte inteira da divisão&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;%/%&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;&lt;/td&gt;
+    &lt;td class="tg-z67g"&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
 
 **Operadores** |**Nome**                       |**Operações**
 :-------------:|:-----------------------------:|:-------------:
@@ -414,6 +524,7 @@ hist(mtcars$mpg)
 <script>var slideshow = remark.create({
 "highlightStyle": "idea",
 "highlightLines": true,
+"highlightLanguage": "r",
 "countIncrementalSlides": false,
 "ratio": "16:9"
 });
@@ -584,7 +695,7 @@ h2, h3, h4 {
 
 .title-slide h1  {
   color: #ffffff;
-  font-size: 100px;
+  font-size: 80px;
   text-shadow: none;
   font-weight: 400;
   text-align: left;
@@ -654,6 +765,19 @@ hr, .mline h1::after {
   border-radius: 3px;
   padding: 4px;
 }
+
+.footnote {
+    position: absolute;
+    bottom: 3em;
+    padding-right: 4em;
+    font-size: 90%;
+}
+
+.fancy {
+    font-family: 'Cormorant Upright', serif;
+    font-weight: 700;
+}
+
 
 .code10 .remark-code {
   font-size: 10%;
