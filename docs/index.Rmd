@@ -313,13 +313,6 @@ class: inverse, center, middle
 
 ---
 
-
-
-
-
-
-
-?include_graphics
 # Two-column Layout
 
 .pull-left[
@@ -329,7 +322,9 @@ class: inverse, center, middle
 ]
 
 .pull-right[
-![an image](fig/ufpa.png)
+```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='Logo'}
+knitr::include_graphics('fig/ufpa.png')
+```
 ]
 
 <!--
