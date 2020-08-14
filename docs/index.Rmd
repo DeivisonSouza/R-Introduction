@@ -329,10 +329,10 @@ class: inverse, center, middle
 ]
 
 .pull-right[
-![an image](ufpa.png)
+![an image](fig/ufpa.png)
 ]
 
-<!-- your comment
+<!--
 pagedown::chrome_print('https://deivisonsouza.github.io/R-Introduction/')
 -->
 
