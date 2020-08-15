@@ -324,21 +324,17 @@ citation("ggplot2")
 ---
 # Operadores aritméticos
 
+## Expressões básicas
+
 .pull-left[
 ```{r refname, echo=TRUE, eval=FALSE}
 2+3                    # adição
 4*9                    # multiplicação
 20/5                   # divisão
 32-10                  # subtração
-5^3                    # potenciação
+5^3                    # potenciação (exponenciação)
 10%%3                  # resto da divisão
 10%/%3                 # Parte inteira da divisão
-```
-
-```{r refname2, echo=TRUE, eval=FALSE}
-(2+3)*10
-4*3**3
-
 ```
 
 ]
@@ -346,10 +342,29 @@ citation("ggplot2")
 .pull-right[
 ```{r ref.label="refname", echo=FALSE, eval=TRUE, collapse=TRUE}
 ```
+]
+---
 
+# Operadores aritméticos
+
+## Expressões mais complexas
+
+- Regra `PEMDAS` (`P`arênteses, `E`xponenciação, `M`ultiplicação, `D`ivisão, `A`dição e `S`ubtração).
+
+.pull-left[
+```{r refname2, echo=TRUE, eval=FALSE}
+(2+3)*10
+4*3**3
+5+8-4*9/3
+5+(8-4)*9/3
+2^3*4+6/2
+2^3*(4+6)/2
+```
+]
+
+.pull-right[
 ```{r ref.label="refname2", echo=FALSE, eval=TRUE, collapse=TRUE}
 ```
-
 ]
 
 ---
@@ -510,8 +525,8 @@ class: inverse, center, middle
 ]
 
 .pull-right[
-```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='Logo'}
-knitr::include_graphics('fig/ufpa.png')
+```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap=''}
+knitr::include_graphics('fig/Triang')
 ```
 ]
 
