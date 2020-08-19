@@ -194,11 +194,28 @@ knitr::include_graphics('fig/RStudio.png')
 ---
 # IDE RStudio - Contato inicial
 
-Ao iniciar o RStudio ....
-
+```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='Interface do RStudio.'}
+knitr::include_graphics('fig/RstudioIG.svg')
+```
 http://material.curso-r.com/rbase/
+---
+# IDE RStudio - Painéis principais
 
-Esses quadrantes representam o editor, o console, o environment e o output. Eles vêm nesta ordem, e depois você pode organizá-los da forma que preferir.
+`Editor`: Painel de desenvolvimento dos códigos R.
+
+`Environment`: Painel onde aparecerão todos os objetos criados no R.
+
+`Console`: Painel para rodar os códigos R e receber outputs.
+
+`Plots`: Painel de saída gráfica.
+
+`History`: Painel que mostra um histórico dos comandos executados na sessão corrente.
+
+`Help`: Painel que mostra a documentação de funções de pacotes, quando solicitada.
+
+`Files`: Painel para identificar arquivos no diretório de trabalho.
+
+`Packages`: Painel que mostra os pacotes instalados. É possível identificar os pacotes carregados na sessão corrente.
 
 ---
 # Como citar o R? <span style='font-size:50px;'>&#129300;</span>
