@@ -171,7 +171,10 @@ knitr::include_graphics('fig/Img2.png')
 ---
 name: Rstudio
 
-# IDE Rstudio - download e instalação
+# IDE RStudio - download e instalação
+<br>
+<br>
+O RStudio é o ambiente de desenvolvimento de códigos em R mais comumente usado por usuários da linguagem.
 
 >- **1<sup>o</sup> Passo**: Acessar a página do projeto RStudio: https://www.rstudio.com;
 
@@ -188,6 +191,14 @@ name: Rstudio
 ```{r, echo=FALSE, out.width='30%', fig.align='center', fig.cap=''}
 knitr::include_graphics('fig/RStudio.png')
 ```
+---
+# IDE RStudio - Contato inicial
+
+Ao iniciar o RStudio ....
+
+http://material.curso-r.com/rbase/
+
+Esses quadrantes representam o editor, o console, o environment e o output. Eles vêm nesta ordem, e depois você pode organizá-los da forma que preferir.
 
 ---
 # Como citar o R? <span style='font-size:50px;'>&#129300;</span>
