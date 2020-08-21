@@ -49,7 +49,7 @@ use_extra_styles(
 use_tachyons()
 use_panelset()
 use_clipboard()
-style_panelset(panel_tab_color_active = "red")
+style_panelset(panel_tab_color_active = "blue")
 ```
 
 ```{r xaringanthemer, warning=FALSE, include=FALSE}
