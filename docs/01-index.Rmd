@@ -64,17 +64,27 @@ style_mono_accent(
 
 # Conteúdo
 
-<p style="font-weight:bold;"> Parte 1 - Apresentação geral </p>
+.pull-left[
+<p style="font-weight:bold;"> Parte 1 - Apresentação </p>
 * [A linguagem R](#linguagemR)
 * [Por que usar a linguagem R?](#porqueR)
-* [RGui - Download e instalação](#RGui)
+* [RGui](#RGui)
+    + [Download e instalação](#RGui)
+    + [Contato inicial](#RguiInicial)
 * [IDE Rstudio](#Rstudio)
-    + Download e instalação
-    + Painéis principais
+    + [Download e instalação](#Rstudio)
+    + [Painéis principais](#IDEPaineis)
+* [Como fazer citações?](#ComoCitar)
+]
 
+.pull-right[
 <p style="font-weight:bold;"> Parte 2 - Iniciando no R </p>
-- [Operadores no R](#IniciandoNoR)
+- [Operadores no R](#Operadores)
+    + [Aritméticos](#arit)
+    + [Relacionais](#relac)
+    + [Lógicos](#log)
 - [Funções matemáticas usuais](#FunsMat)
+]
 
 ---
 name: linguagemR
@@ -96,19 +106,20 @@ name: porqueR
 
 * Uma linguagem *open source* (código aberto).
 
-
+<!--
 .footnote[[🔙️](#toc)]
+-->
 
 ---
 name: RGui
 
 # RGui - Download e instalação
 
->- **1<sup>o</sup> Passo**: Acessar a página do projeto R em https://www.r-project.org/;
+* **1<sup>o</sup> Passo**: Acessar a página do projeto R em https://www.r-project.org/;
 
->- **2<sup>o</sup> Passo**: Do lado esquerdo da página clique sobre o link **CRAN**;
+* **2<sup>o</sup> Passo**: Do lado esquerdo da página clique sobre o link **CRAN**;
 
->- **3<sup>o</sup> Passo**: Será aberta uma página com diversos links de **CRAN Mirrors**, isto é, espelhos CRAN. Veja na tabela 1 os principais espelhos disponíveis no Brasil.
+* **3<sup>o</sup> Passo**: Será aberta uma página com diversos links de **CRAN Mirrors**, isto é, espelhos CRAN. Veja na tabela 1 os principais espelhos disponíveis no Brasil.
 
 ---
 # O RGui
@@ -126,7 +137,7 @@ Tabela 1: Espelhos CRAN disponíveis no Brasil.
 ---
 # O RGui
 
-**4<sup>o</sup> Passo**: Na página http://cran-r.c3sl.ufpr.br/, na seção **Download and Install R**, clicar em um dos três links, conforme o SO do usuário:
+* **4<sup>o</sup> Passo**: Na página http://cran-r.c3sl.ufpr.br/, na seção **Download and Install R**, clicar em um dos três links, conforme o SO do usuário:
 
 1. **Download R for Windows;**
 2. **Download R for Linux; ou**
@@ -135,13 +146,14 @@ Tabela 1: Espelhos CRAN disponíveis no Brasil.
 ---
 # O RGui
 
->- **5<sup>o</sup> Passo**: Clicar no link do **subdiretório base** ou em **install R for the first time**, para instalar o R pela primeira vez;
+* **5<sup>o</sup> Passo**: Clicar no link do **subdiretório base** ou em **install R for the first time**, para instalar o R pela primeira vez;
 
->- **6<sup>o</sup> Passo**: Clicar em **Download R 3.3.2 for Windows**. Assim, será iniciado o download do R Development Core Team para o respectivo sistema; e
+* **6<sup>o</sup> Passo**: Clicar em **Download R 3.3.2 for Windows**. Assim, será iniciado o download do R Development Core Team para o respectivo sistema; e
 
->- **7<sup>o</sup> Passo**: Por fim, basta usar o setup baixado para instalar o programa.
+* **7<sup>o</sup> Passo**: Por fim, basta usar o setup baixado para instalar o programa.
 
 ---
+name: RguiInicial
 # O RGui
 
 Ao inicializar o **R Development Core Team** pela primeira vez aparecerá a seguinte imagem:
@@ -178,17 +190,17 @@ name: Rstudio
 <br>
 O RStudio é o ambiente de desenvolvimento de códigos em R mais comumente usado por usuários da linguagem.
 
->- **1<sup>o</sup> Passo**: Acessar a página do projeto RStudio: https://www.rstudio.com;
+* **1<sup>o</sup> Passo**: Acessar a página do projeto RStudio: https://www.rstudio.com;
 
->- **2<sup>o</sup> Passo**: Products $\rightarrow$ RStudio;
+* **2<sup>o</sup> Passo**: Products $\rightarrow$ RStudio;
 
->- **3<sup>o</sup> Passo**: Selecionar a versão do RStudio para Desktop;
+* **3<sup>o</sup> Passo**: Selecionar a versão do RStudio para Desktop;
 
->- **4<sup>o</sup> Passo**: Na edição Open source $\rightarrow$ Download Rstudio Desktop;
+* **4<sup>o</sup> Passo**: Na edição Open source $\rightarrow$ Download Rstudio Desktop;
 
->- **5<sup>o</sup> PASSO**: Installers for Supported Platforms $\rightarrow$ instalador RStudio; e
+* **5<sup>o</sup> PASSO**: Installers for Supported Platforms $\rightarrow$ instalador RStudio; e
 
->- **6<sup>o</sup> Passo**: Por fim, basta usar o setup baixado para instalar o programa.
+* **6<sup>o</sup> Passo**: Por fim, basta usar o setup baixado para instalar o programa.
 
 ```{r, echo=FALSE, out.width='30%', fig.align='center', fig.cap=''}
 knitr::include_graphics('fig/RStudio.png')
@@ -222,6 +234,7 @@ name: IDEPaineis
 `Packages`: Painel que mostra os pacotes instalados. É possível identificar os pacotes carregados na sessão corrente.
 
 ---
+name: ComoCitar
 # Como citar o R? <span style='font-size:50px;'>&#129300;</span>
 
 Use a função <font size="4" face="verdana" color="brown"> citation() </font> no prompt de comando. Para saber como citar o R-base pode-se simplesmente fazer:
@@ -251,7 +264,7 @@ citation("ggplot2")
 ```
 ]
 ---
-name: IniciandoNoR
+name: Operadores
 class: center, inverse, middle
 
 # OPERADORES NO R
@@ -263,7 +276,6 @@ class: center, inverse, middle
 # Aritméticos | Lógicos | Relacionais
 
 ---
-
 # Iniciando no R
 ## Tipos de operadores
 
@@ -272,102 +284,93 @@ class: center, inverse, middle
 * Os operadores lógicos e relacionais operam com duas respostas possíveis: `TRUE` (verdadeiro) ou `FALSE` (falso).
 
 <style type="text/css">
-.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;border-style:solid;border-width:1px;}
-.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:0px;color:#333;
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:0px;color:#333;
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-wy0j{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-size:14px;text-align:center;
-  vertical-align:middle}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-.tg .tg-thku{background-color:#f9f9f9;border-color:#000000;font-family:Arial, Helvetica, sans-serif !important;;font-size:16px;
-  text-align:center;vertical-align:middle}
-.tg .tg-95y4{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-size:14px;font-weight:bold;
-  text-align:center;vertical-align:middle}
-.tg .tg-z67g{background-color:#f9f9f9;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-size:14px;
-  text-align:center;vertical-align:middle}
-.tg .tg-0lax{text-align:left;vertical-align:top}
+.tg .tg-bn4o{font-size:18px;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-tsiw{background-color:#f9f9f9;font-size:18px;text-align:center;vertical-align:top}
+.tg .tg-13pz{font-size:18px;text-align:center;vertical-align:top}
 </style>
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-95y4" colspan="2">Aritméticos</th>
-    <th class="tg-95y4" colspan="2">Lógicos</th>
-    <th class="tg-95y4" colspan="2">Relacionais</th>
+    <th class="tg-bn4o" colspan="2">Aritméticos</th>
+    <th class="tg-bn4o" colspan="2">Lógicos</th>
+    <th class="tg-bn4o" colspan="2">Relacionais</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-z67g">Adição</td>
-    <td class="tg-z67g">+</td>
-    <td class="tg-z67g">E (and)/para vetores</td>
-    <td class="tg-z67g">&amp;</td>
-    <td class="tg-z67g">Menor do que...</td>
-    <td class="tg-z67g">&lt;</td>
+    <td class="tg-tsiw">+</td>
+    <td class="tg-tsiw">Adição</td>
+    <td class="tg-tsiw">&amp;</td>
+    <td class="tg-tsiw">E (and)/para vetores</td>
+    <td class="tg-tsiw">&lt;</td>
+    <td class="tg-tsiw">Menor do que...</td>
   </tr>
   <tr>
-    <td class="tg-wy0j">Subtração</td>
-    <td class="tg-wy0j">-</td>
-    <td class="tg-wy0j">E (and) </td>
-    <td class="tg-wy0j">&amp;&amp;</td>
-    <td class="tg-wy0j">Maior do que...</td>
-    <td class="tg-wy0j">&gt;</td>
+    <td class="tg-13pz">-</td>
+    <td class="tg-13pz">Subtração</td>
+    <td class="tg-13pz">&amp;&amp;</td>
+    <td class="tg-13pz">E (and) </td>
+    <td class="tg-13pz">&gt;</td>
+    <td class="tg-13pz">Maior do que...</td>
   </tr>
   <tr>
-    <td class="tg-z67g">Multiplicação</td>
-    <td class="tg-z67g">*</td>
-    <td class="tg-z67g">Ou (or)/para vetores</td>
-    <td class="tg-z67g">⎮</td>
-    <td class="tg-z67g">Menor ou igual do que...</td>
-    <td class="tg-z67g">&lt;=</td>
+    <td class="tg-tsiw">*</td>
+    <td class="tg-tsiw">Multiplicação</td>
+    <td class="tg-tsiw">⎮</td>
+    <td class="tg-tsiw">Ou (or)/para vetores</td>
+    <td class="tg-tsiw">&lt;=</td>
+    <td class="tg-tsiw">Menor ou igual do que...</td>
   </tr>
   <tr>
-    <td class="tg-wy0j">Divisão</td>
-    <td class="tg-wy0j">/</td>
-    <td class="tg-wy0j">Ou (or)</td>
-    <td class="tg-wy0j">⎮⎮</td>
-    <td class="tg-wy0j">Maior ou igual do que...</td>
-    <td class="tg-wy0j">&gt;=</td>
+    <td class="tg-13pz">/</td>
+    <td class="tg-13pz">Divisão</td>
+    <td class="tg-13pz">⎮⎮</td>
+    <td class="tg-13pz">Ou (or)</td>
+    <td class="tg-13pz">&gt;=</td>
+    <td class="tg-13pz">Maior ou igual do que...</td>
   </tr>
   <tr>
-    <td class="tg-z67g">Potenciação</td>
-    <td class="tg-z67g">^ ou **</td>
-    <td class="tg-z67g">Não...</td>
-    <td class="tg-z67g">!</td>
-    <td class="tg-z67g">Igual a...</td>
-    <td class="tg-thku">==</td>
+    <td class="tg-tsiw">^ ou **</td>
+    <td class="tg-tsiw">Potenciação</td>
+    <td class="tg-tsiw">!</td>
+    <td class="tg-tsiw">Não...</td>
+    <td class="tg-tsiw">==</td>
+    <td class="tg-tsiw">Igual a...</td>
   </tr>
   <tr>
-    <td class="tg-wy0j">Resto da divisão</td>
-    <td class="tg-wy0j">%%</td>
-    <td class="tg-wy0j"></td>
-    <td class="tg-wy0j"></td>
-    <td class="tg-wy0j">Diferente de...</td>
-    <td class="tg-wy0j">!=</td>
+    <td class="tg-13pz">%%</td>
+    <td class="tg-13pz">Resto da divisão</td>
+    <td class="tg-13pz">xor</td>
+    <td class="tg-13pz"><span style="font-weight:400;font-style:normal">Ou exclusivo...</span></td>
+    <td class="tg-13pz">!=</td>
+    <td class="tg-13pz">Diferente de...</td>
   </tr>
   <tr>
-    <td class="tg-z67g">Parte inteira da divisão</td>
-    <td class="tg-z67g">%/%</td>
-    <td class="tg-z67g"></td>
-    <td class="tg-z67g"></td>
-    <td class="tg-z67g">Ou exclusivo...</td>
-    <td class="tg-z67g">xor</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-baqh">Contém</td>
-    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">%in%</span></td>
+    <td class="tg-tsiw">%/%</td>
+    <td class="tg-tsiw">Parte inteira da divisão</td>
+    <td class="tg-tsiw"></td>
+    <td class="tg-tsiw"></td>
+    <td class="tg-tsiw"><span style="font-weight:400;font-style:normal">%in%</span></td>
+    <td class="tg-tsiw"><span style="font-weight:400;font-style:normal">Contém</span></td>
   </tr>
 </tbody>
 </table>
 
 ---
+name: arit
+
 # Operadores aritméticos
 
 ## Expressões básicas
+
+Operadores usuais para realizar operações matemáticas. As operações são realizadas de maneira elementar. 
+
+Aqui, tem-se uma nova função: `c()` = *concatenate*. Mas, não fique ansioso😅, veremos isso com mais detalhes😌.
 
 .pull-left[
 ```{r refname, echo=TRUE, eval=FALSE}
@@ -379,10 +382,26 @@ class: center, inverse, middle
 10%%3                  # resto da divisão
 10%/%3                 # Parte inteira da divisão
 ```
+
+```{r refname3, echo=TRUE, eval=FALSE}
+(x <- c(2,4,6,8))
+(y <- c(1,5,9,0))
+```
+
+```{r refname4, echo=TRUE, eval=FALSE}
+x + y
+x^y/x
+```
 ]
 
 .pull-right[
 ```{r ref.label="refname", echo=FALSE, eval=TRUE, collapse=TRUE}
+```
+
+```{r ref.label="refname3", echo=FALSE, eval=TRUE, collapse=TRUE}
+```
+
+```{r ref.label="refname4", echo=FALSE, eval=TRUE, collapse=TRUE}
 ```
 ]
 ---
@@ -410,16 +429,38 @@ class: center, inverse, middle
 ]
 
 ---
+name: log
+
+# Operadores lógicos
+## Função `xor()` – OU (OR) exclusivo
+
+.pull-left[
+```{r loGname, echo=TRUE, eval=FALSE}
+2+3                    # adição
+
+```
+]
+
+.pull-right[
+```{r ref.label="loGname", echo=FALSE, eval=TRUE, collapse=TRUE}
+```
+]
+
+---
+name: relac
+
 # Operadores relacionais (ou comparação)
+
+Operadores relacionais são usados para realizar comparações de valores. 
 
 .pull-left[
 ```{r logVar, echo=TRUE, eval=FALSE}
-# criando variáveis "x", "y" e "v"
+# criando vetores de um único elemento
 (x <- 20)
 (y <- 10)
 (v <- 1)
 
-# criando dois vetores: "z" e "w"
+# criando vetores com + de um elemento: "z" e "w"
 (z <- c(1:5))
 (w <- c(5:1))
 ```
@@ -430,8 +471,6 @@ x < y        # x é menor do que y?
 x != y       # x é diferente de y?
 y <= x       # y é menor ou igual a x?
 y >= x       # y é maior ou igual a x?
-z >= w       # elementos de z são >= aos de w?
-w >= z       # elementos de w são >= aos de z?
 z == w       # elementos de z são iguais aos de w?
 z != w       # elementos de z são dif. aos de w?
 x >= w       # x é >= aos elementos de w?
@@ -447,16 +486,58 @@ w %in% v     # w contém v?
 
 ```{r ref.label="logname", echo=FALSE, eval=TRUE, collapse=T}
 ```
+]
+---
+# Operadores relacionais (ou comparação)
 
+## Um pouco mais sobre o operador `%in%`
+
+Imagine que você tenha uma lista de espécies ocorrentes em uma Área de Manejo Florestal (AMF).
+
+.pull-top[
+```{r IN, echo=TRUE, eval=FALSE}
+(especie <- c("Vouacapoua-americana", "Cedrela-odorata", "Bertholletia-excelsa", "Dinizia-excelsa Ducke", "Bertholletia-excelsa", "Manilkara-huberi", "Couratari-guianensis"))
+```
+]
+
+.pull-bottom[
+```{r ref.label="IN", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+
+Agora, você deseja descobrir se essa lista contém *Bertholletia excelsa* e *Swietenia macrophylla*, espécies proibidas para exploração.
+
+.pull-left[
+```{r INesp, echo=TRUE, eval=FALSE}
+"Bertholletia-excelsa" %in% especie
+"Swietenia-macrophylla" %in% especie
+```
+]
+
+.pull-right[
+```{r ref.label="INesp", echo=FALSE, eval=TRUE, collapse=T}
+```
 ]
 
 ---
-# Operadores lógicos
+name: combine
+
+# Operadores relacionais + lógicos
 
 
 ---
 name: FunsMat
+class: center, inverse, middle
 
+# FUNÇÕES MATEMÁTICAS
+
+<img src="https://cdn.pixabay.com/photo/2019/02/18/19/59/graphic-4005286_960_720.png" width="150px"/>
+
+<br> <br> <br>
+
+# Uma variedade de funções já disponíveis!
+
+---
 # Funções matemáticas usuais
 
 A linguagem R dispõe de funções matemáticas usualmente encontradas em calculadoras científicas.
