@@ -1,6 +1,6 @@
 ---
 title: "Linguagem de programação R"
-subtitle: "(Uma introdução para iniciantes)"
+subtitle: "(uma introdução para iniciantes)"
 author: "Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
 date: |
@@ -62,12 +62,79 @@ style_mono_accent(
 )
 ```
 
+# 👋 Olá, sejam bem vindos!
+
+## <bdi style="color:magenta;">1. Sobre o instrutor</bdi>
+
+.pull-left[
+* <bdi style="font-weight:bold">Graduação (Titulação: ano 2008)</bdi>
+    + Universidade Federal Rural da Amazônia (UFRA); e
+    + Título: Bacharel em Engenharia Florestal.
+
+* <bdi style="font-weight:bold">Mestrado (Titulação: ano 2011)</bdi>
+    + Universidade Federal Rural da Amazônia (UFRA);
+    + Programa de Pós-graduação em Ciências Florestais (PPGCF); e
+    + Área de Concentração: Manejo de ecossistemas florestais.
+]
+
+.pull-right[
+* <bdi style="font-weight:bold">Doutorado (Titulação: ano 2020)</bdi>
+    + Universidade Federal do Paraná (UFPR);
+    + Programa de Pós-graduação em Engenharia Florestal (PPGEF); e
+    + Área de Concentração: Manejo Florestal.
+    
+* <bdi style="font-weight:bold">Especialização (Defesa: ano 2019)</bdi>
+    + Universidade Federal do Paraná (UFPR);
+    + Área: Big Data e Data Science
+]
+
+---
+# 👋 Olá, sejam bem vindos!
+
+.pull-left[
+## <bdi style="color:magenta;">2. Interesses atuais</bdi>
+
+* <bdi style="font-weight:bold">Linguagem de programação</bdi>
+    + R
+    + Python
+    
+* <bdi style="font-weight:bold">Modelagem preditiva aplicada à ciência florestal</bdi>
+    + Aprendizado de máquina
+    
+* <bdi style="font-weight:bold">Visão computacional</bdi> 
+    + reconhecimento de imagens
+    
+* <bdi style="font-weight:bold">Criação de Dashboard - Shiny</bdi>
+]
+
+.pull-right[
+## <bdi style="color:magenta;">3. Websites e contatos </bdi>
+
+GitHub: https://github.com/DeivisonSouza
+
+.center[<img src="https://marketplace-cdn.atlassian.com/files/images/cec44feb-0b1b-4fe3-936d-67a51a1fe28e.png" width="20%">]
+
+
+ORCID: https://orcid.org/0000-0002-2975-0927
+
+```{r, echo=FALSE, out.width='20%', fig.align='center', fig.cap=''}
+knitr::include_graphics('fig/ORCID.png')
+```
+
+Email: deivisonvs@ufpa.br
+]
+
+---
 # Conteúdo
 
 .pull-left[
-<p style="font-weight:bold;"> Parte 1 - Apresentação </p>
+<p style="font-weight:bold;"> Parte 1 - Motivação </p>
 * [A linguagem R](#linguagemR)
 * [Por que usar a linguagem R?](#porqueR)
+]
+
+.pull-right[
+<p style="font-weight:bold;"> Parte 2 - Download e instalação  </p>
 * [RGui](#RGui)
     + [Download e instalação](#RGui)
     + [Contato inicial](#RguiInicial)
@@ -77,14 +144,12 @@ style_mono_accent(
 * [Como fazer citações?](#ComoCitar)
 ]
 
-.pull-right[
-<p style="font-weight:bold;"> Parte 2 - Iniciando no R </p>
+<p style="font-weight:bold;"> Parte 3 - Iniciando no R </p>
 - [Operadores no R](#Operadores)
     + [Aritméticos](#arit)
     + [Relacionais](#relac)
     + [Lógicos](#log)
 - [Funções matemáticas usuais](#FunsMat)
-]
 
 ---
 name: linguagemR
@@ -98,6 +163,14 @@ R é um ambiente de software livre de estatística e gráficos, capaz de compila
 --
 
 Os **espelho CRAN** são servidores distribuídos em diversos países que armazenam a linguagem R. Assim, ao deixar escolher de qual servidor será feito o download, permite-se que o usuário defina o servidor mais próximo, reduzindo tempo de tráfego.
+
+---
+name: motivacao
+class: center, inverse, middle
+
+# Por que usar a linguagem R?
+
+&#129300;
 
 ---
 name: porqueR
@@ -683,13 +756,16 @@ hist(mtcars$mpg)
 .panel[.panel-name[Plot]
 
 ```{r, echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('index_files/figure-html/panel-chunk-1.png')
+knitr::include_graphics('01-Introduction_files/figure-html/panel-chunk-1.png')
 ```
 
-
-
 ]
 ]
-
-
 ---
+name: end
+class: center, inverse, middle
+
+# Obrigado!
+## .center[&#127795; Deivison Venicio Souza &#127795;]
+(deivisonvs@ufpa.br)
+
