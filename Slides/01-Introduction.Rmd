@@ -110,12 +110,21 @@ style_mono_accent(
 .pull-right[
 ## <bdi style="color:magenta;">3. Websites e contatos </bdi>
 
-GitHub: https://github.com/DeivisonSouza
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+<i class="fa fa-github fa-2x"></i>
+<!--use the fa-lg (33% increase), fa-2x, fa-3x, fa-4x, or fa-5x classes-->
+</body>
+</html>
+<bdi style="font-weight:bold">GitHub:</bdi> https://github.com/DeivisonSouza
 
-.center[<img src="https://marketplace-cdn.atlassian.com/files/images/cec44feb-0b1b-4fe3-936d-67a51a1fe28e.png" width="20%">]
+<span class="iconify" data-icon="fa-brands:orcid" data-inline="false"></span>
 
 
-ORCID: https://orcid.org/0000-0002-2975-0927
+<div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-2975-0927" href="https://orcid.org/0000-0002-2975-0927" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_128x128.png" style="width:1.5em;margin-right:1em;" alt="ORCID iD icon">https://orcid.org/0000-0002-2975-0927</a></div>
 
 ```{r, echo=FALSE, out.width='20%', fig.align='center', fig.cap=''}
 knitr::include_graphics('fig/ORCID.png')
