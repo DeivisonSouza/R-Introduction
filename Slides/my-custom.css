@@ -171,11 +171,14 @@ hr, .mline h1::after {
 
 .red { color: red; }
 .remark-code-line-highlighted { background-color: #d9f2d9; }
-.remark-code, .remark-inline-code { 
+.remark-code, .remark-inline-code {
     color: #7c347f;
     font-weight: 300;
 }
 
+.thick {
+  font-weight: bold;
+}
 
 .code10 .remark-code {
   font-size: 10%;

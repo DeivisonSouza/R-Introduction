@@ -25,7 +25,7 @@ class: center, middle, inverse, title-slide
 ## (uma introdução para iniciantes)
 ### Deivison Venicio Souza
 ### Universidade Federal do Pará (UFPA)
-### <p>07/setembro/2020 | Altamira, Pará</p>
+### <p>09/setembro/2020 | Altamira, Pará</p>
 
 ---
 
@@ -130,17 +130,17 @@ Email: deivisonvs@ufpa.br
 ]
 
 .pull-right[
-&lt;p style="font-weight:bold;"&gt; Parte 2 - Download e instalação  &lt;/p&gt;
+&lt;p style="font-weight:bold;"&gt; Parte 2 - RGui e RStudio  &lt;/p&gt;
 * [RGui](#RGui)
     + [Download e instalação](#RGui)
     + [Contato inicial](#RguiInicial)
-* [IDE Rstudio](#Rstudio)
+* [IDE RStudio](#Rstudio)
     + [Download e instalação](#Rstudio)
     + [Painéis principais](#IDEPaineis)
 * [Como fazer citações?](#ComoCitar)
 ]
 
-&lt;p style="font-weight:bold;"&gt; Parte 3 - Iniciando no R &lt;/p&gt;
+&lt;p style="font-weight:bold;"&gt; Parte 3 - Iniciando na linguagem R &lt;/p&gt;
 - [Operadores no R](#Operadores)
     + [Aritméticos](#arit)
     + [Relacionais](#relac)
@@ -150,48 +150,72 @@ Email: deivisonvs@ufpa.br
 ---
 name: linguagemR
 
-# A linguagem R
-## O que é?
-### Um software estatístico livre
+# Linguagem de Programação R
 
+## Um software estatístico livre
+
+.bg-washed-near-white.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 R é um ambiente de software livre de estatística e gráficos, capaz de compilar e executar em uma ampla variedade de plataformas UNIX, Windows e MacOS. Para fazer o download do R, é necessário escolher um **espelho CRAN** (https://cran.r-project.org/) para que seja feito o download da versão mais atual.
-
+]
 --
 
-Os **espelho CRAN** são servidores distribuídos em diversos países que armazenam a linguagem R. Assim, ao deixar escolher de qual servidor será feito o download, permite-se que o usuário defina o servidor mais próximo, reduzindo tempo de tráfego.
+.bg-washed-near-white.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+.center[&lt;bdi style="font-weight:bold"&gt;Espelhos CRAN&lt;/bdi&gt;]
+Os &lt;bdi style="font-weight:bold"&gt;espelhos CRAN&lt;/bdi&gt; são servidores distribuídos em diversos países que armazenam a linguagem R. Assim, ao deixar escolher de qual servidor será feito o download, permite-se que o usuário defina o servidor mais próximo, reduzindo tempo de tráfego.
+]
 
 ---
-name: motivacao
+name: motiv
 class: center, inverse, middle
 
-# Por que usar a linguagem R?
+# PARTE 1 - MOTIVAÇÃO
 
-&amp;#129300;
+&lt;br&gt; &lt;br&gt; &lt;br&gt;
+
+# ~ Por que usar a linguagem R? ~
 
 ---
 name: porqueR
 
 # Por que usar a linguagem R?
 
-* Uma linguagem *open source* (código aberto).
+* É *open source* (código aberto);
+
+* É um ambiente em que inúmeras técnicas estatísticas clássicas e modernas são constantemente implementadas;
+
+* É um ambiente para manipulação eficaz de conjuntos de dados;
+
+uma coleção grande, coerente e integrada de ferramentas intermediárias para análise de dados,
 
 &lt;!--
 .footnote[[🔙️](#toc)]
 --&gt;
 
 ---
+name: IDE
+class: center, inverse, middle
+
+# PARTE 2 - RGui e RStudio
+
+&lt;br&gt; &lt;br&gt; &lt;br&gt;
+
+# ~ Download e instalação ~
+
+---
 name: RGui
 
 # RGui - Download e instalação
+&lt;br&gt; &lt;br&gt; &lt;br&gt;
 
-* **1&lt;sup&gt;o&lt;/sup&gt; Passo**: Acessar a página do projeto R em https://www.r-project.org/;
+* &lt;bdi style="font-weight:bold"&gt;1&lt;sup&gt;o&lt;/sup&gt; Passo&lt;/bdi&gt;: Acessar a página do projeto R em https://www.r-project.org/;
 
-* **2&lt;sup&gt;o&lt;/sup&gt; Passo**: Do lado esquerdo da página clique sobre o link **CRAN**;
+* &lt;bdi style="font-weight:bold"&gt;2&lt;sup&gt;o&lt;/sup&gt; Passo&lt;/bdi&gt;: Do lado esquerdo da página clique sobre o link **CRAN**;
 
-* **3&lt;sup&gt;o&lt;/sup&gt; Passo**: Será aberta uma página com diversos links de **CRAN Mirrors**, isto é, espelhos CRAN. Veja na tabela 1 os principais espelhos disponíveis no Brasil.
+* &lt;bdi style="font-weight:bold"&gt;3&lt;sup&gt;o&lt;/sup&gt; Passo&lt;/bdi&gt;: Será aberta uma página com diversos links de **CRAN Mirrors**, isto é, espelhos CRAN. Veja na tabela 1 os principais espelhos disponíveis no Brasil.
 
 ---
 # O RGui
+&lt;br&gt; &lt;br&gt; &lt;br&gt;
 
 | ** Link **                          | ** Instituição**                                            |
 | :---------------------------------- | :---------------------------------------------------------- |
@@ -205,21 +229,23 @@ Tabela 1: Espelhos CRAN disponíveis no Brasil.
 
 ---
 # O RGui
+&lt;br&gt; &lt;br&gt; &lt;br&gt;
 
-* **4&lt;sup&gt;o&lt;/sup&gt; Passo**: Na página http://cran-r.c3sl.ufpr.br/, na seção **Download and Install R**, clicar em um dos três links, conforme o SO do usuário:
+* &lt;bdi style="font-weight:bold"&gt;4&lt;sup&gt;o&lt;/sup&gt; Passo&lt;/bdi&gt;: Na página http://cran-r.c3sl.ufpr.br/, na seção &lt;bdi style="font-weight:bold"&gt;Download and Install R&lt;/bdi&gt;, clicar em um dos três links, conforme o SO do usuário:
 
-1. **Download R for Windows;**
-2. **Download R for Linux; ou**
-3. **Download R for (Mac) OS X.**
+1. Download R for Windows;
+2. Download R for Linux; ou
+3. Download R for (Mac) OS X.
 
 ---
 # O RGui
+&lt;br&gt; &lt;br&gt; &lt;br&gt;
 
-* **5&lt;sup&gt;o&lt;/sup&gt; Passo**: Clicar no link do **subdiretório base** ou em **install R for the first time**, para instalar o R pela primeira vez;
+* &lt;bdi style="font-weight:bold"&gt;5&lt;sup&gt;o&lt;/sup&gt; Passo&lt;/bdi&gt;: Clicar no link do &lt;bdi style="font-weight:bold"&gt;subdiretório base&lt;/bdi&gt; ou em o &lt;bdi style="font-weight:bold"&gt;install R for the first time&lt;/bdi&gt;, para instalar o R pela primeira vez;
 
-* **6&lt;sup&gt;o&lt;/sup&gt; Passo**: Clicar em **Download R 3.3.2 for Windows**. Assim, será iniciado o download do R Development Core Team para o respectivo sistema; e
+* &lt;bdi style="font-weight:bold"&gt;6&lt;sup&gt;o&lt;/sup&gt; Passo&lt;/bdi&gt;: Clicar em &lt;bdi style="font-weight:bold"&gt;Download R 4.0.2 for Windows&lt;/bdi&gt;. Assim, será iniciado o download do R Development Core Team para o respectivo sistema; e
 
-* **7&lt;sup&gt;o&lt;/sup&gt; Passo**: Por fim, basta usar o setup baixado para instalar o programa.
+* &lt;bdi style="font-weight:bold"&gt;7&lt;sup&gt;o&lt;/sup&gt; Passo&lt;/bdi&gt;: Por fim, basta usar o setup baixado para instalar o programa.
 
 ---
 name: RguiInicial
@@ -235,7 +261,7 @@ Ao inicializar o **R Development Core Team** pela primeira vez aparecerá a segu
 ---
 # O RGui
 
-- No contato inicial do usuário com o RGui tem-se a visão do **R Console**.
+- No contato inicial do usuário com o RGui tem-se a visão do &lt;bdi style="font-weight:bold"&gt;R Console&lt;/bdi&gt;.
 - O sinal &lt;font size="4" face="verdana" color="red"&gt; &gt; &lt;/font&gt; é o prompt de comando.
 - Execute as funções &lt;font size="4" face="verdana" color="brown"&gt; demo() &lt;/font&gt;, &lt;font size="4" face="verdana" color="brown"&gt; help() &lt;/font&gt;, &lt;font size="4" face="verdana" color="brown"&gt; help.start() &lt;/font&gt;, &lt;font size="4" face="verdana" color="brown"&gt; q() &lt;/font&gt;.
 
@@ -247,7 +273,7 @@ Ao inicializar o **R Development Core Team** pela primeira vez aparecerá a segu
 ---
 # O RGui
 
-O RGui possui um **R editor**: **Arquivo** `\(\rightarrow\)` **Abrir script**.
+O RGui possui um &lt;bdi style="font-weight:bold"&gt;R editor&lt;/bdi&gt;: &lt;bdi style="font-weight:bold"&gt;Arquivo&lt;/bdi&gt; `\(\rightarrow\)` &lt;bdi style="font-weight:bold"&gt;Abrir script&lt;/bdi&gt;.
 
 &lt;div class="figure" style="text-align: center"&gt;
 &lt;img src="fig/Img2.png" alt="R editor" width="50%" /&gt;
@@ -259,22 +285,23 @@ name: Rstudio
 
 # IDE RStudio - download e instalação
 &lt;br&gt;
-&lt;br&gt;
-O RStudio é o ambiente de desenvolvimento de códigos em R mais comumente usado por usuários da linguagem.
 
-* **1&lt;sup&gt;o&lt;/sup&gt; Passo**: Acessar a página do projeto RStudio: https://www.rstudio.com;
+O &lt;bdi style="font-weight:bold"&gt;RStudio&lt;/bdi&gt; é um ambiente de desenvolvimento integrado (*Integrated Development Environment* - IDE) de códigos em R mais comumente usado por usuários da linguagem.
 
-* **2&lt;sup&gt;o&lt;/sup&gt; Passo**: Products `\(\rightarrow\)` RStudio;
+* &lt;bdi style="font-weight:bold"&gt;1&lt;sup&gt;o&lt;/sup&gt; Passo&lt;/bdi&gt;: Acessar a página do projeto RStudio: https://www.rstudio.com;
 
-* **3&lt;sup&gt;o&lt;/sup&gt; Passo**: Selecionar a versão do RStudio para Desktop;
+* &lt;bdi style="font-weight:bold"&gt;2&lt;sup&gt;o&lt;/sup&gt; Passo&lt;/bdi&gt;: Products `\(\rightarrow\)` RStudio;
 
-* **4&lt;sup&gt;o&lt;/sup&gt; Passo**: Na edição Open source `\(\rightarrow\)` Download Rstudio Desktop;
+* &lt;bdi style="font-weight:bold"&gt;3&lt;sup&gt;o&lt;/sup&gt; Passo&lt;/bdi&gt;: Selecionar a versão do RStudio para Desktop;
 
-* **5&lt;sup&gt;o&lt;/sup&gt; PASSO**: Installers for Supported Platforms `\(\rightarrow\)` instalador RStudio; e
+* &lt;bdi style="font-weight:bold"&gt;4&lt;sup&gt;o&lt;/sup&gt; Passo&lt;/bdi&gt;: Na edição Open source `\(\rightarrow\)` Download Rstudio Desktop;
 
-* **6&lt;sup&gt;o&lt;/sup&gt; Passo**: Por fim, basta usar o setup baixado para instalar o programa.
+* &lt;bdi style="font-weight:bold"&gt;5&lt;sup&gt;o&lt;/sup&gt; Passo&lt;/bdi&gt;: Installers for Supported Platforms `\(\rightarrow\)` instalador RStudio; e
+
+* &lt;bdi style="font-weight:bold"&gt;6&lt;sup&gt;o&lt;/sup&gt; Passo&lt;/bdi&gt;: Por fim, basta usar o setup baixado para instalar o programa.
 
 &lt;img src="fig/RStudio.png" width="30%" style="display: block; margin: auto;" /&gt;
+
 ---
 # IDE RStudio - Contato inicial
 
@@ -283,10 +310,13 @@ O RStudio é o ambiente de desenvolvimento de códigos em R mais comumente usado
 &lt;p class="caption"&gt;Interface do RStudio.&lt;/p&gt;
 &lt;/div&gt;
 http://material.curso-r.com/rbase/
+
 ---
 name: IDEPaineis
 
 # IDE RStudio - Painéis principais
+
+&lt;br&gt;
 
 `Editor`: Painel de desenvolvimento dos códigos R.
 
@@ -376,20 +406,66 @@ citation("ggplot2")
 ```
 ]
 ---
+name: init
+class: center, inverse, middle
+# PARTE 3 - INICIANDO NA LINGUAGEM R
+
+&lt;img src="https://cdn.pixabay.com/photo/2019/02/18/19/59/graphic-4005286_960_720.png" width="150px"/&gt;
+
+---
+name: Operadores
+class: center, inverse, middle
+
+# SINTAXE NO R
+
+&lt;br&gt; &lt;br&gt; &lt;br&gt;
+# Linguagem de expressão | Case sensitive | Comandos elementares
+
+---
+
+# Sintaxe da linguagem R
+&lt;br&gt;
+
+.bg-washed-near-white.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
++ `Linguagem de expressão`: Tecnicamente, R é uma linguagem de expressão com uma sintaxe muito simples.
+
++ `Case sensitive`: A linguagem R é *case sensitive*. Isto é, diferencia &lt;bdi style="font-weight:bold"&gt;maiúscula&lt;/bdi&gt; e &lt;bdi style="font-weight:bold"&gt;minúscula&lt;/bdi&gt;.
+
++ `Comandos elementares no R`: consistem em &lt;bdi style="font-weight:bold"&gt;expressões&lt;/bdi&gt; ou &lt;bdi style="font-weight:bold"&gt;atribuições&lt;/bdi&gt;. 
+
+  - Se uma &lt;bdi style="font-weight:bold"&gt;expressão&lt;/bdi&gt; é um comando, então o R: .blue[avalia], .blue[imprime] (a menos que seja especificado ao contrário) e o resultado é ".blue[perdido]".
+
+  - Se uma &lt;bdi style="font-weight:bold"&gt;atribuições&lt;/bdi&gt; é um comando, então o R: .blue[avalia], .blue[atribui] o resultado para uma variável e .blue[suprime] a impressão automática do resultado".
+
+.tr[
+Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#:~:text=Contents%5D%5BIndex%5D-,1.8%20R%20commands%2C%20case%20sensitivity%2C%20etc.,would%20refer%20to%20different%20variables.)
+]]
+---
+
+# Sintaxe da linguagem R
+&lt;br&gt;
+
+.bg-washed-near-white.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
++ `Separação de comandos`: ponto e vírgula (.red[;]) ou por uma nova linha;
+
++ `Comentários`: precedidos pelo símbolo .red[\#] (tudo após .red[\#] não é executado);
+
++ `Comando incompleto`: se o comando R não estiver sintaticamente completo (em uma linha de código), o prompt aparecerá com o símbolo: .red[+]. Esse símbolo indica continuação do comando inicial.
+
+.tr[
+Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#:~:text=Contents%5D%5BIndex%5D-,1.8%20R%20commands%2C%20case%20sensitivity%2C%20etc.,would%20refer%20to%20different%20variables.)
+]]
+
+---
 name: Operadores
 class: center, inverse, middle
 
 # OPERADORES NO R
-
-&lt;img src="https://cdn.pixabay.com/photo/2019/02/18/19/59/graphic-4005286_960_720.png" width="150px"/&gt;
-
 &lt;br&gt; &lt;br&gt; &lt;br&gt;
-
 # Aritméticos | Lógicos | Relacionais
 
 ---
-# Iniciando no R
-## Tipos de operadores
+# Tipos de operadores
 
 * Na linguagem R existe três tipos de operadores: 1) `aritméticos`; 2) `lógicos (ou booleanos)`; e 3) `comparação (ou relacionais)`. 
 
@@ -476,13 +552,11 @@ class: center, inverse, middle
 ---
 name: arit
 
-# Operadores aritméticos
-
-## Expressões básicas
+# Operadores aritméticos - Expressões básicas
 
 Operadores usuais para realizar operações matemáticas. As operações são realizadas de maneira elementar. 
 
-Aqui, tem-se uma nova função: `c()` = *concatenate*. Mas, não fique ansioso😅, veremos isso com mais detalhes😌.
+Aqui, tem-se uma função: `c()` = *concatenate*. Mas, não fique ansioso😅, veremos isso com mais detalhes😌.
 
 .pull-left[
 
@@ -535,9 +609,7 @@ x^y/x
 ]
 ---
 
-# Operadores aritméticos
-
-## Expressões mais complexas
+# Operadores aritméticos - Expressões mais complexas
 
 - Regra `PEMDAS` (`P`arênteses, `E`xponenciação, `M`ultiplicação, `D`ivisão, `A`dição e `S`ubtração).
 
@@ -1123,11 +1195,14 @@ hr, .mline h1::after {
 
 .red { color: red; }
 .remark-code-line-highlighted { background-color: #d9f2d9; }
-.remark-code, .remark-inline-code { 
+.remark-code, .remark-inline-code {
     color: #7c347f;
     font-weight: 300;
 }
 
+.thick {
+  font-weight: bold;
+}
 
 .code10 .remark-code {
   font-size: 10%;
