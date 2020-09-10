@@ -583,24 +583,6 @@ x^y/x
 ]
 
 ---
-name: log
-
-# Operadores lógicos
-## Função `xor()` – OU (OR) exclusivo
-
-.pull-left[
-```{r loGname, echo=TRUE, eval=FALSE}
-2+3                    # adição
-
-```
-]
-
-.pull-right[
-```{r ref.label="loGname", echo=FALSE, eval=TRUE, collapse=TRUE}
-```
-]
-
----
 name: relac
 
 # Operadores relacionais (ou comparação)
@@ -674,9 +656,70 @@ Agora, você deseja descobrir se essa lista contém *Bertholletia excelsa* e *Sw
 ]
 
 ---
-name: combine
+name: log
+# Operadores lógicos
+<br> <br>
+São usados para realizar operações lógicas, cuja saída é uma resposta booleana. Ou seja, Verdadeiro (`TRUE`) ou Falso (`FALSE`).
 
-# Operadores relacionais + lógicos
+```{r , echo=FALSE, eval=TRUE}
+
+dt <- data.frame(
+  especie = c("Acapu", "Araucaria", "Mogno", "Cedro", "Ipe", 
+              "Cedro", "Ipe","Araucaria", "Angelim","Angelim"),
+              DAP = c(23.2, 27.1, 33.6, 42.6, 52.1, 
+                      60.4, 70.5, 80.3, 90.8, 100.5),
+              H = c(8.4, 8.7, 9.1, 13.2, 15.4, 
+                    16.8, 17.9, 18.6, 19.5, 22.4),
+              cortar = c("Não", "Não", "Não", "Não", "Sim",
+                         "Não", "Não", "Não", "Sim", "Sim"),
+  stringsAsFactors = T)
+DT::datatable(dt, editable = 'cell', 
+              options = list(pageLength = 5, dom = 'tip'))
+
+```
+
+---
+
+# Operadores lógicos
+## Função `xor()` – OU (OR) exclusivo
+
+.pull-left[
+```{r loGname, echo=TRUE, eval=FALSE}
+2+3                    # adição
+
+```
+]
+
+.pull-right[
+```{r ref.label="loGname", echo=FALSE, eval=TRUE, collapse=TRUE}
+```
+]
+
+```{r logic, echo=TRUE, eval=FALSE}
+
+IF <- data.frame(
+  especie = c("Acapu", "Araucaria", "Mogno", "Cedro", "Ipe"), 
+  DAP = c(23.0, 27.0, 33.6, 42.6, 52.1),
+  H = c(8.4, 8.7, 9.1, 13.2, 15.4),
+  cortar = c("Não", "Não", "Não", "Não", "Sim"),
+stringsAsFactors = FALSE)
+```
+
+```{r logicname, echo=TRUE, eval=FALSE}
+x == 20 & y == 10        # (TRUE se ambos: x == 20 e y == 10)
+x >= 3 && y <= 50
+```
+]
+
+.pull-right[
+```{r ref.label="logic", echo=FALSE, eval=TRUE, collapse=T}
+```
+<br>
+<br>
+
+```{r ref.label="logicname", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
 
 
 ---

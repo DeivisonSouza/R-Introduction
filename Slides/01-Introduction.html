@@ -16,6 +16,15 @@
     <link href="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
     <script src="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
     <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <link href="libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="libs/datatables-binding/datatables.js"></script>
+    <link href="libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="libs/dt-core/js/jquery.dataTables.min.js"></script>
+    <link href="libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+    <script src="libs/crosstalk/js/crosstalk.min.js"></script>
   </head>
   <body>
     <textarea id="source">
@@ -25,7 +34,7 @@ class: center, middle, inverse, title-slide
 ## (uma introdução para iniciantes)
 ### Deivison Venicio Souza
 ### Universidade Federal do Pará (UFPA)
-### <p>09/setembro/2020 | Altamira, Pará</p>
+### <p>10/setembro/2020 | Altamira, Pará</p>
 
 ---
 
@@ -638,26 +647,6 @@ x^y/x
 ]
 
 ---
-name: log
-
-# Operadores lógicos
-## Função `xor()` – OU (OR) exclusivo
-
-.pull-left[
-
-```r
-2+3                    # adição
-```
-]
-
-.pull-right[
-
-```
-## [1] 5
-```
-]
-
----
 name: relac
 
 # Operadores relacionais (ou comparação)
@@ -758,9 +747,61 @@ Agora, você deseja descobrir se essa lista contém *Bertholletia excelsa* e *Sw
 ]
 
 ---
-name: combine
+name: log
+# Operadores lógicos
+&lt;br&gt; &lt;br&gt;
+São usados para realizar operações lógicas, cuja saída é uma resposta booleana. Ou seja, Verdadeiro (`TRUE`) ou Falso (`FALSE`).
 
-# Operadores relacionais + lógicos
+<div id="htmlwidget-bdca59d75070de93206c" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-bdca59d75070de93206c">{"x":{"filter":"none","editable":{"target":"cell","disable":{"columns":null}},"data":[["1","2","3","4","5","6","7","8","9","10"],["Acapu","Araucaria","Mogno","Cedro","Ipe","Cedro","Ipe","Araucaria","Angelim","Angelim"],[23.2,27.1,33.6,42.6,52.1,60.4,70.5,80.3,90.8,100.5],[8.4,8.7,9.1,13.2,15.4,16.8,17.9,18.6,19.5,22.4],["Não","Não","Não","Não","Sim","Não","Não","Não","Sim","Sim"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>especie<\/th>\n      <th>DAP<\/th>\n      <th>H<\/th>\n      <th>cortar<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"tip","columnDefs":[{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+
+---
+
+# Operadores lógicos
+## Função `xor()` – OU (OR) exclusivo
+
+.pull-left[
+
+```r
+2+3                    # adição
+```
+]
+
+.pull-right[
+
+```
+## [1] 5
+```
+]
+
+
+```r
+IF &lt;- data.frame(
+  especie = c("Acapu", "Araucaria", "Mogno", "Cedro", "Ipe"), 
+  DAP = c(23.0, 27.0, 33.6, 42.6, 52.1),
+  H = c(8.4, 8.7, 9.1, 13.2, 15.4),
+  cortar = c("Não", "Não", "Não", "Não", "Sim"),
+stringsAsFactors = FALSE)
+```
+
+
+```r
+x == 20 &amp; y == 10        # (TRUE se ambos: x == 20 e y == 10)
+x &gt;= 3 &amp;&amp; y &lt;= 50
+```
+]
+
+.pull-right[
+
+&lt;br&gt;
+&lt;br&gt;
+
+
+```
+## [1] TRUE
+## [1] TRUE
+```
+]
 
 
 ---
