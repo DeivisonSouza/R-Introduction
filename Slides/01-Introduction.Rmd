@@ -30,6 +30,7 @@ name: toc
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+library(tidyverse)
 ```
 
 ```{r xaringanExtra, echo=FALSE}
@@ -658,13 +659,17 @@ Agora, você deseja descobrir se essa lista contém *Bertholletia excelsa* e *Sw
 ---
 name: log
 # Operadores lógicos
-<br> <br>
-São usados para realizar operações lógicas, cuja saída é uma resposta booleana. Ou seja, Verdadeiro (`TRUE`) ou Falso (`FALSE`).
 
+.left-column[
+
+São usados para realizar operações lógicas, cuja saída é uma resposta booleana. Ou seja, Verdadeiro (`TRUE`) ou Falso (`FALSE`).
+]
+
+.right-column[
 ```{r , echo=FALSE, eval=TRUE}
 
 dt <- data.frame(
-  especie = c("Acapu", "Araucaria", "Mogno", "Cedro", "Ipe", 
+  Especie = c("Acapu", "Araucaria", "Mogno", "Cedro", "Ipe", 
               "Cedro", "Ipe","Araucaria", "Angelim","Angelim"),
               DAP = c(23.2, 27.1, 33.6, 42.6, 52.1, 
                       60.4, 70.5, 80.3, 90.8, 100.5),
@@ -673,10 +678,23 @@ dt <- data.frame(
               cortar = c("Não", "Não", "Não", "Não", "Sim",
                          "Não", "Não", "Não", "Sim", "Sim"),
   stringsAsFactors = T)
-DT::datatable(dt, editable = 'cell', 
-              options = list(pageLength = 5, dom = 'tip'))
+
+dt %>% 
+   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '400px',
+                 caption = 'Medidas fictícias para 10 árvores de espécies florestais.',
+     options=list(pageLength = 10, dom = 'tip',
+                  autoWidth = T,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
 
 ```
+
+]
 
 ---
 
