@@ -28,7 +28,7 @@ originais (e outros) que originaram os slides do curso (construídos com
 pacote `xarigan`) disponíveis no repositório
 [R-Introduction-slides](https://github.com/DeivisonSouza/R-Introduction-slides).
 
-# Instrutor :deciduous\_tree:
+# Facilitador :deciduous\_tree:
 
 **Deivison Venicio Souza** possui graduação em :deciduous\_tree:
 **Engenharia Florestal** :deciduous\_tree: pela Universidade Federal
