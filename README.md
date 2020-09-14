@@ -1,5 +1,5 @@
 
-# Seja bem vindo\! :smiley: :grin:
+# Seja bem vindo(a)\! :smiley: :grin:
 
 :calendar: 14, 15 de Setembro, 2020
 
