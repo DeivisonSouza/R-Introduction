@@ -5,9 +5,9 @@
 
 # Seja bem vindo(a)\! :smiley: :grin:
 
-:calendar: 26, 27 de Novembro e 03, 04, 10 de Dezembro, 2020
+:calendar: **26, 27 de Novembro e 03, 04, 10 de Dezembro, 2020**
 
-:alarm\_clock: 14h00min - 18h20min
+:alarm\_clock: **14h00min - 18h20min**
 
 :ledger: Slide
 [1](https://deivisonsouza.github.io/R-Introduction/Slides/01-Introduction.html),
