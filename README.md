@@ -6,7 +6,8 @@
 :alarm\_clock: 09:00 - 17:00
 
 :ledger: Slide
-[1](https://deivisonsouza.github.io/R-Introduction/Slides/01-Introduction.html)
+[1](https://deivisonsouza.github.io/R-Introduction/Slides/01-Introduction.html),
+[2](https://deivisonsouza.github.io/R-Introduction/Slides/02-Objects.html)
 
 <img src="Slides/fig/ufpa.png" width="100" align="middle" class="center">
 <img src="Slides/fig/floresta.png" width="100" align="middle" class="center">
