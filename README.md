@@ -1,9 +1,13 @@
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+<!-- Emprestei a função list_github_files() da Curso-R (https://github.com/curso-r). Na verdade a ideia por trás desse readme emprestei da Curso-R. Achei excelente!-->
+
 # Seja bem vindo(a)\! :smiley: :grin:
 
-:calendar: 14, 15 de Setembro, 2020
+:calendar: 26, 27 de Novembro e 03, 04, 10 de Dezembro, 2020
 
-:alarm\_clock: 09:00 - 17:00
+:alarm\_clock: 14h00min - 18h20min
 
 :ledger: Slide
 [1](https://deivisonsouza.github.io/R-Introduction/Slides/01-Introduction.html),
@@ -28,6 +32,16 @@ Ciências Florestais. Este repositório guarda os arquivos .Rmd, figuras
 originais (e outros) que originaram os slides do curso (construídos com
 pacote `xarigan`) disponíveis no repositório
 [R-Introduction-slides](https://github.com/DeivisonSouza/R-Introduction-slides).
+
+# Slides do curso
+
+Todos os slides do curso **Linguagem de programação R: uma introdução
+para iniciantes** estão disponíveis nos links a seguir.
+
+| Slide                       | Link                                                                         |
+| :-------------------------- | :--------------------------------------------------------------------------- |
+| Slides/01-Introduction.html | <https://deivisonsouza.github.io/R-Introduction/Slides/01-Introduction.html> |
+| Slides/02-Objects.html      | <https://deivisonsouza.github.io/R-Introduction/Slides/02-Objects.html>      |
 
 # Facilitador :deciduous\_tree:
 
