@@ -21,27 +21,26 @@
 O curso de **Linguagem de programação R: uma introdução para
 iniciantes** constitui uma atividade complementar no âmbito do **Ensino
 Remoto Emergencial (ERE)** na [Universidade Federal do Pará
-(UFPA)](https://portal.ufpa.br/index.php), conforme reza a [Resolução
+(UFPA)](https://portal.ufpa.br/index.php), conforme dispõe a [Resolução
 n. 5.294, de 21 de agosto
 de 2020](http://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2020/Resolucao_5294_2020_CONSEPE.pdf).
 Este curso foi elaborado para atender aos discentes regularmente
 matriculados no curso de graduação em Engenharia Florestal da UFPA. O
 objetivo do curso é aproximar os discentes da linguagem de programação
 R, estimulando seu uso para análise de dados científicos, no âmbito das
-Ciências Florestais. Este repositório guarda os arquivos .Rmd, figuras
-originais (e outros) que originaram os slides do curso (construídos com
-pacote `xarigan`) disponíveis no repositório
-[R-Introduction-slides](https://github.com/DeivisonSouza/R-Introduction-slides).
+Ciências Florestais. Este repositório guarda os códigos R, arquivos .Rmd
+dos slides, figuras (e outros) utilizados neste curso.
 
-# Slides do curso
+# Programação do curso
 
-Todos os slides do curso **Linguagem de programação R: uma introdução
-para iniciantes** estão disponíveis nos links a seguir.
+A programação, o conteúdo e os slides do curso **Linguagem de
+programação R: uma introdução para iniciantes** estão disponíveis a
+seguir:
 
-| Slide                       | Link                                                                         |
-| :-------------------------- | :--------------------------------------------------------------------------- |
-| Slides/01-Introduction.html | <https://deivisonsouza.github.io/R-Introduction/Slides/01-Introduction.html> |
-| Slides/02-Objects.html      | <https://deivisonsouza.github.io/R-Introduction/Slides/02-Objects.html>      |
+| Data  | Slide                       | Link                                                                         |
+| :---- | :-------------------------- | :--------------------------------------------------------------------------- |
+| 26/11 | Slides/01-Introduction.html | <https://deivisonsouza.github.io/R-Introduction/Slides/01-Introduction.html> |
+| 26/11 | Slides/02-Objects.html      | <https://deivisonsouza.github.io/R-Introduction/Slides/02-Objects.html>      |
 
 # Facilitador :deciduous\_tree:
 
