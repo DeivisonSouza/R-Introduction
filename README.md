@@ -33,10 +33,11 @@ Emergencial (ERE)** na [Universidade Federal do Pará
 n. 5.294, de 21 de agosto
 de 2020](http://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2020/Resolucao_5294_2020_CONSEPE.pdf).
 Este curso foi elaborado para atender aos discentes regularmente
-matriculados no curso de graduação em Engenharia Florestal da UFPA,
-visando aproximá-los da linguagem de programação R. Sempre que possível,
-exemplos dentro do contexto das Ciências Florestais são usados,
-objetivando otimizar o processo de ensino-aprendizagem.
+matriculados no curso de graduação em
+<bdi style="font-weight:bold;color:green;">Engenharia Florestal da
+UFPA</bdi>, visando aproximá-los da linguagem de programação R. Sempre
+que possível, exemplos dentro do contexto das Ciências Florestais são
+usados, objetivando otimizar o processo de ensino-aprendizagem.
 
 # Programação do curso
 
