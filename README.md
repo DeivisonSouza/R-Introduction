@@ -13,8 +13,12 @@
 [1](https://deivisonsouza.github.io/R-Introduction/Slides/01-Introduction.html),
 [2](https://deivisonsouza.github.io/R-Introduction/Slides/02-Objects.html)
 
+<div>
+
 <img src="Slides/fig/ufpa.png" width="100" align="middle" class="center">
 <img src="Slides/fig/floresta.png" width="100" align="middle" class="center">
+
+<div>
 
 # Descrição
 
