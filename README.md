@@ -37,10 +37,10 @@ A programação, o conteúdo e os slides do curso **Linguagem de
 programação R: uma introdução para iniciantes** estão disponíveis a
 seguir:
 
-| Data  | Slide                       | Link                                                                         |
-| :---- | :-------------------------- | :--------------------------------------------------------------------------- |
-| 26/11 | Slides/01-Introduction.html | <https://deivisonsouza.github.io/R-Introduction/Slides/01-Introduction.html> |
-| 26/11 | Slides/02-Objects.html      | <https://deivisonsouza.github.io/R-Introduction/Slides/02-Objects.html>      |
+| Slide                       | Link                                                                         |
+| :-------------------------- | :--------------------------------------------------------------------------- |
+| Slides/01-Introduction.html | <https://deivisonsouza.github.io/R-Introduction/Slides/01-Introduction.html> |
+| Slides/02-Objects.html      | <https://deivisonsouza.github.io/R-Introduction/Slides/02-Objects.html>      |
 
 # Facilitador :deciduous\_tree:
 
