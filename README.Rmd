@@ -69,7 +69,7 @@ Este repositório guarda os códigos R, arquivos .Rmd dos slides, figuras (e out
 
 # Programação do curso
 
-A programação, o conteúdo e os slides do curso **Linguagem de programação R: uma introdução para iniciantes** estão disponíveis a seguir:
+A programação, o conteúdo e os slides do curso **Linguagem de programação R: uma introdução para iniciantes** estão disponíveis a seguir.
 
 ```{r, echo = FALSE}
 knitr::kable(

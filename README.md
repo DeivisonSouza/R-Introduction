@@ -43,7 +43,7 @@ usados, objetivando otimizar o processo de ensino-aprendizagem.
 
 A programação, o conteúdo e os slides do curso **Linguagem de
 programação R: uma introdução para iniciantes** estão disponíveis a
-seguir:
+seguir.
 
 | Slide                       | Link                                                                         |
 | :-------------------------- | :--------------------------------------------------------------------------- |
