@@ -444,78 +444,90 @@ class: center, inverse, middle
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
-.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
-  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
-  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-bn4o{font-size:18px;font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-tsiw{background-color:#f9f9f9;font-size:18px;text-align:center;vertical-align:top}
-.tg .tg-13pz{font-size:18px;text-align:center;vertical-align:top}
+.tg td{background-color:#fff;border-bottom-width:1px;border-color:#ccc;border-style:solid;border-top-width:1px;
+  border-width:0px;color:#333;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;
+  word-break:normal;}
+.tg th{background-color:#f0f0f0;border-bottom-width:1px;border-color:#ccc;border-style:solid;border-top-width:1px;
+  border-width:0px;color:#333;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;
+  padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-mqa1{border-color:#000000;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-zwlc{background-color:#f9f9f9;border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-abip{background-color:#f9f9f9;border-color:inherit;text-align:center;vertical-align:top}
 </style>
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-bn4o" colspan="2">Aritméticos</th>
-    <th class="tg-bn4o" colspan="2">Lógicos</th>
-    <th class="tg-bn4o" colspan="2">Relacionais</th>
+    <th class="tg-mqa1" colspan="2">Aritméticos</th>
+    <th class="tg-7btt" colspan="2">Lógicos</th>
+    <th class="tg-7btt" colspan="2">Relacionais</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-tsiw">+</td>
-    <td class="tg-tsiw">Adição</td>
-    <td class="tg-tsiw">&amp;</td>
-    <td class="tg-tsiw">E (and)/para vetores</td>
-    <td class="tg-tsiw">&lt;</td>
-    <td class="tg-tsiw">Menor do que...</td>
+    <td class="tg-zwlc">Símbolo</td>
+    <td class="tg-zwlc">Descrição</td>
+    <td class="tg-zwlc">Símbolo</td>
+    <td class="tg-zwlc">Descrição</td>
+    <td class="tg-zwlc">Símbolo</td>
+    <td class="tg-zwlc">Descrição</td>
   </tr>
   <tr>
-    <td class="tg-13pz">-</td>
-    <td class="tg-13pz">Subtração</td>
-    <td class="tg-13pz">&amp;&amp;</td>
-    <td class="tg-13pz">E (and) </td>
-    <td class="tg-13pz">&gt;</td>
-    <td class="tg-13pz">Maior do que...</td>
+    <td class="tg-c3ow">+</td>
+    <td class="tg-c3ow">Adição</td>
+    <td class="tg-c3ow">&amp;</td>
+    <td class="tg-c3ow">E (and) - versão vetorizada</td>
+    <td class="tg-c3ow">&lt;</td>
+    <td class="tg-c3ow">Menor do que...</td>
   </tr>
   <tr>
-    <td class="tg-tsiw">*</td>
-    <td class="tg-tsiw">Multiplicação</td>
-    <td class="tg-tsiw">⎮</td>
-    <td class="tg-tsiw">Ou (or)/para vetores</td>
-    <td class="tg-tsiw">&lt;=</td>
-    <td class="tg-tsiw">Menor ou igual do que...</td>
+    <td class="tg-abip">-</td>
+    <td class="tg-abip">Subtração</td>
+    <td class="tg-abip">&amp;&amp;</td>
+    <td class="tg-abip">E (and) - versão não-vetorizada</td>
+    <td class="tg-abip">&gt;</td>
+    <td class="tg-abip">Maior do que...</td>
   </tr>
   <tr>
-    <td class="tg-13pz">/</td>
-    <td class="tg-13pz">Divisão</td>
-    <td class="tg-13pz">⎮⎮</td>
-    <td class="tg-13pz">Ou (or)</td>
-    <td class="tg-13pz">&gt;=</td>
-    <td class="tg-13pz">Maior ou igual do que...</td>
+    <td class="tg-c3ow">*</td>
+    <td class="tg-c3ow">Multiplicação</td>
+    <td class="tg-c3ow">⎮</td>
+    <td class="tg-c3ow">Ou (or) - versão vetorizada</td>
+    <td class="tg-c3ow">&lt;=</td>
+    <td class="tg-c3ow">Menor ou igual do que...</td>
   </tr>
   <tr>
-    <td class="tg-tsiw">^ ou **</td>
-    <td class="tg-tsiw">Potenciação</td>
-    <td class="tg-tsiw">!</td>
-    <td class="tg-tsiw">Não...</td>
-    <td class="tg-tsiw">==</td>
-    <td class="tg-tsiw">Igual a...</td>
+    <td class="tg-abip">/</td>
+    <td class="tg-abip">Divisão</td>
+    <td class="tg-abip">⎮⎮</td>
+    <td class="tg-abip">Ou (or) - <span style="font-weight:400;font-style:normal">versão não-vetorizada</span></td>
+    <td class="tg-abip">&gt;=</td>
+    <td class="tg-abip">Maior ou igual do que...</td>
   </tr>
   <tr>
-    <td class="tg-13pz">%%</td>
-    <td class="tg-13pz">Resto da divisão</td>
-    <td class="tg-13pz">xor</td>
-    <td class="tg-13pz"><span style="font-weight:400;font-style:normal">Ou exclusivo...</span></td>
-    <td class="tg-13pz">!=</td>
-    <td class="tg-13pz">Diferente de...</td>
+    <td class="tg-c3ow">^ ou **</td>
+    <td class="tg-c3ow">Potenciação</td>
+    <td class="tg-c3ow">!</td>
+    <td class="tg-c3ow">Não...</td>
+    <td class="tg-c3ow">==</td>
+    <td class="tg-c3ow">Igual a...</td>
   </tr>
   <tr>
-    <td class="tg-tsiw">%/%</td>
-    <td class="tg-tsiw">Parte inteira da divisão</td>
-    <td class="tg-tsiw"></td>
-    <td class="tg-tsiw"></td>
-    <td class="tg-tsiw"><span style="font-weight:400;font-style:normal">%in%</span></td>
-    <td class="tg-tsiw"><span style="font-weight:400;font-style:normal">Contém</span></td>
+    <td class="tg-abip">%%</td>
+    <td class="tg-abip">Resto da divisão</td>
+    <td class="tg-abip">xor</td>
+    <td class="tg-abip"><span style="font-weight:400;font-style:normal">Ou exclusivo...</span></td>
+    <td class="tg-abip">!=</td>
+    <td class="tg-abip">Diferente de...</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">%/%</td>
+    <td class="tg-c3ow">Parte inteira da divisão</td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"><span style="font-weight:400;font-style:normal">%in%</span></td>
+    <td class="tg-c3ow"><span style="font-weight:400;font-style:normal">Contém</span></td>
   </tr>
 </tbody>
 </table>
@@ -642,7 +654,7 @@ Imagine que você tenha uma lista de espécies ocorrentes em uma Área de Manejo
 ```
 ]
 
-Agora, você deseja descobrir se essa lista contém *Bertholletia excelsa* e *Swietenia macrophylla*, espécies proibidas para exploração.
+Agora, você deseja descobrir se essa lista contém *Bertholletia excelsa* e *Swietenia macrophylla*. Essas espécies estão classificadas na categoria Vulnerável (VU), conforme a [Portaria MMA 443, de 17 de dezembro de 2014](http://dados.gov.br/dataset/portaria_443). Portanto, sofrem as restrições estabelecidas no art. 2º, incluindo a proibição de manejo.
 
 .pull-left[
 ```{r INesp, echo=TRUE, eval=FALSE}
@@ -657,32 +669,67 @@ Agora, você deseja descobrir se essa lista contém *Bertholletia excelsa* e *Sw
 ]
 
 ---
+# Operadores relacionais (ou comparação)
+
+## Um pouco mais sobre o operador `%in%`
+
+.pull-top[
+```{r IN2, echo=TRUE, eval=FALSE}
+(especie <- c("Vouacapoua-americana", "Cedrela-odorata", "Bertholletia-excelsa", "Dinizia-excelsa Ducke", "Bertholletia-excelsa", "Manilkara-huberi", "Couratari-guianensis"))
+
+(ameacadas <- c("Vouacapoua-americana", "Bertholletia-excelsa", "Cedrela-odorata",
+                "Swietenia-macrophylla"))
+```
+]
+
+.pull-bottom[
+```{r ref.label="IN2", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+
+.pull-top[
+```{r IN3, echo=TRUE, eval=FALSE}
+especie %in% ameacadas
+#unique(especie[which(especie %in% ameacadas)])
+```
+]
+
+.pull-bottom[
+```{r ref.label="IN3", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+
+---
 name: log
 # Operadores lógicos
 
 .left-column[
+Em programação, estes operadores são usados para realizar `operações lógicas`, cuja saída é uma `resposta booleana`. Ou seja, uma resposta (ou dado) booleana indica se algo é Verdadeiro (`TRUE`) ou Falso (`FALSE`).
 
-São usados para realizar operações lógicas, cuja saída é uma resposta booleana. Ou seja, Verdadeiro (`TRUE`) ou Falso (`FALSE`).
+<bdi style="font-weight:bold">Mogno</bdi> = <bdi style="color:green;">*Swietenia macrophylla*</bdi>; e
+
+<bdi style="font-weight:bold">Angelim</bdi> = <bdi style="color:green;">*Hymenolobium petraeum*</bdi>.
 ]
 
 .right-column[
 ```{r , echo=FALSE, eval=TRUE}
 
 dt <- data.frame(
-  Especie = c("Acapu", "Araucaria", "Mogno", "Cedro", "Ipe", 
-              "Cedro", "Ipe","Araucaria", "Angelim","Angelim"),
-              DAP = c(23.2, 27.1, 33.6, 42.6, 52.1, 
-                      60.4, 70.5, 80.3, 90.8, 100.5),
-              H = c(8.4, 8.7, 9.1, 13.2, 15.4, 
-                    16.8, 17.9, 18.6, 19.5, 22.4),
-              cortar = c("Não", "Não", "Não", "Não", "Sim",
-                         "Não", "Não", "Não", "Sim", "Sim"),
+  Especie = c("Mogno", "Mogno", "Mogno", "Angelim","Angelim",
+              "Angelim", "Angelim","Angelim", "Mogno", "Mogno"),
+              DAP = c(33.6, 42.6, 52.1, 80.3, 90.8,
+                      60.4, 70.5, 100.5, 60.7, 27.1),
+              H = c(9.1, 13.2, 15.4, 18.6, 19.5,
+                    16.8, 17.9, 22.4, 15.3, 8.7),
+              Cipo = c("Sim", "Não", "Sim", "Não", "Sim",
+                         "Não", "Sim", "Não", "Sim", "Sim"),
+              QF = c(2, 1, 3, 1, 2, 1, 2, 1, 1, 3),
   stringsAsFactors = T)
 
 dt %>% 
    DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
                  class = "display", width = '400px',
-                 caption = 'Medidas fictícias para 10 árvores de espécies florestais.',
+                 caption = 'Dados fictícios para 10 árvores de duas espécies florestais.',
      options=list(pageLength = 10, dom = 'tip',
                   autoWidth = T,
        initComplete = htmlwidgets::JS(
@@ -691,13 +738,51 @@ dt %>%
           "}")
        ) 
      )
-
 ```
 
 ]
 
 ---
+# Operadores lógicos
 
+## Operador `&` - versão vetorizada
+
+Use o operador lógico `&` para encontrar responder as questões a seguir:
+
++ Quais árvores possuem <bdi style="font-weight:bold">DAP maior do que 50cm</bdi> `e` <bdi style="font-weight:bold">qualidade de fuste (QF) igual a 1</bdi>?
+
+```{r operE, echo=TRUE, eval=FALSE}
+dt$DAP >= 50 & dt$QF == 1
+```
+
+```{r ref.label="operE", echo=FALSE, eval=TRUE, collapse=T}
+```
+
++ Quais árvores não possuem <bdi style="font-weight:bold">cipós presentes</bdi>, <bdi style="font-weight:bold">qualidade de fuste (QF) igual a 1</bdi> `e` <bdi style="font-weight:bold">DAP maior do que 50cm</bdi>?
+
+```{r operE2, echo=TRUE, eval=FALSE}
+dt$Cipo == "Não" & dt$QF == 1 & dt$DAP >= 50
+```
+
+```{r ref.label="operE2", echo=FALSE, eval=TRUE, collapse=T}
+```
+
+
+---
++ Quais árvores possuem <bdi style="font-weight:bold">DAP maior do que 50cm</bdi> `e` <bdi style="font-weight:bold">podem ser exploradas</bdi> (cortadas)?
+
++ Baseado no Diâmetro Mínimo de Corte (DMC) estabelecido no art. 6º da [Resolução CONAMA nº 406 de 02/02/2009](http://www2.mma.gov.br/port/conama/legiabre.cfm?codlegi=597) (Publicado no DOU nº 26, de 06/02/2009, pág. 100) quais árvores são passíveis de corte (exploração) legal (considerando a inexistência de outros impedimentos!)?
+
+
+```{r , echo=TRUE, eval=FALSE}
+DAP >= 50 & Cortar == "Sim"
+```
+
+```{r ref.label="operE", echo=FALSE, eval=TRUE, collapse=T}
+```
+
+
+---
 # Operadores lógicos
 ## Função `xor()` – OU (OR) exclusivo
 
