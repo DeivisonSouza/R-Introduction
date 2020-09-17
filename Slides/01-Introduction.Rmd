@@ -782,7 +782,7 @@ A [Resolução CONAMA nº 406 de 02/02/2009](http://www2.mma.gov.br/port/conama/
 
 ## Operador `&` - versão vetorizada (cont.)
 
-+ Quais árvores possuem <bdi style="font-weight:bold">cipós ausentes</bdi>, <bdi style="font-weight:bold">QF igual a 1</bdi> `e` <bdi style="font-weight:bold">DAP maior ou igual a 50cm</bdi>?
+✍ Quais árvores possuem <bdi style="font-weight:bold">cipós ausentes</bdi>, <bdi style="font-weight:bold">QF igual a 1</bdi> `e` <bdi style="font-weight:bold">DAP maior ou igual a 50cm</bdi>❓
 
 ```{r operE2, echo=TRUE, eval=FALSE}
 dt$Cipo == "Não" & dt$QF == 1 & dt$DAP >= 50
