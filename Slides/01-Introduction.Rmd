@@ -31,6 +31,13 @@ name: toc
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 library(tidyverse)
+
+knitr::opts_chunk$set(
+  fig.showtext = TRUE,
+  fig.width = 16, 
+  fig.height = 8, 
+  dpi = 300
+)
 ```
 
 ```{r xaringanExtra, echo=FALSE}
@@ -706,29 +713,30 @@ name: log
 .left-column[
 Em programação, estes operadores são usados para realizar `operações lógicas`, cuja saída é uma `resposta booleana`. Ou seja, uma resposta (ou dado) booleana indica se algo é Verdadeiro (`TRUE`) ou Falso (`FALSE`).
 
-<bdi style="font-weight:bold">Mogno</bdi> = <bdi style="color:green;">*Swietenia macrophylla*</bdi>; e
+<bdi style="font-weight:bold">Mogno brasileiro</bdi> = <bdi style="color:green;">*Swietenia macrophylla*</bdi>; e
 
-<bdi style="font-weight:bold">Angelim</bdi> = <bdi style="color:green;">*Hymenolobium petraeum*</bdi>.
+<bdi style="font-weight:bold">Angelim pedra</bdi> = <bdi style="color:green;">*Hymenolobium petraeum*</bdi>.
 ]
 
 .right-column[
 ```{r , echo=FALSE, eval=TRUE}
 
 dt <- data.frame(
-  Especie = c("Mogno", "Mogno", "Mogno", "Angelim","Angelim",
-              "Angelim", "Angelim","Angelim", "Mogno", "Mogno"),
+  Especie = c("Swietenia macrophylla", "Swietenia macrophylla", "Swietenia macrophylla", "Hymenolobium petraeum","Hymenolobium petraeum", "Hymenolobium petraeum", "Hymenolobium petraeum","Hymenolobium petraeum", "Swietenia macrophylla", "Swietenia macrophylla"),
               DAP = c(33.6, 42.6, 52.1, 80.3, 90.8,
-                      60.4, 70.5, 100.5, 60.7, 27.1),
+                      49.4, 70.5, 100.5, 60.7, 27.1),
               H = c(9.1, 13.2, 15.4, 18.6, 19.5,
                     16.8, 17.9, 22.4, 15.3, 8.7),
               Cipo = c("Sim", "Não", "Sim", "Não", "Sim",
                          "Não", "Sim", "Não", "Sim", "Sim"),
-              QF = c(2, 1, 3, 1, 2, 1, 2, 1, 1, 3),
+              QF = c(2, 1, 3, 1, 2, 1, 2, 3, 1, 3),
+              Selecao = c("Protegida", "Protegida", "Protegida", "Explorar", "Explorar",
+                          "Remanescente", "Explorar", "Remanescente","Protegida", "Protegida"),
   stringsAsFactors = T)
 
 dt %>% 
    DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
-                 class = "display", width = '400px',
+                 class = "display", width = '350px',
                  caption = 'Dados fictícios para 10 árvores de duas espécies florestais.',
      options=list(pageLength = 10, dom = 'tip',
                   autoWidth = T,
@@ -747,18 +755,34 @@ dt %>%
 
 ## Operador `&` - versão vetorizada
 
-Use o operador lógico `&` para encontrar responder as questões a seguir:
+Use o operador lógico `&` para responder as questões a seguir:
 
-+ Quais árvores possuem <bdi style="font-weight:bold">DAP maior do que 50cm</bdi> `e` <bdi style="font-weight:bold">qualidade de fuste (QF) igual a 1</bdi>?
+✍ Quais árvores possuem <bdi style="font-weight:bold">DAP maior ou igual a 50cm</bdi> `e` <bdi style="font-weight:bold">qualidade de fuste (QF) igual a 1</bdi>❓
+
+--
 
 ```{r operE, echo=TRUE, eval=FALSE}
 dt$DAP >= 50 & dt$QF == 1
 ```
 
+--
+
 ```{r ref.label="operE", echo=FALSE, eval=TRUE, collapse=T}
 ```
 
-+ Quais árvores não possuem <bdi style="font-weight:bold">cipós presentes</bdi>, <bdi style="font-weight:bold">qualidade de fuste (QF) igual a 1</bdi> `e` <bdi style="font-weight:bold">DAP maior do que 50cm</bdi>?
+--
+.bg-washed-near-white.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+.center[<bdi style="font-weight:bold">🌳 Legislação florestal!🌳</bdi>]
+
+A [Resolução CONAMA nº 406 de 02/02/2009](http://www2.mma.gov.br/port/conama/legiabre.cfm?codlegi=597) (Publicada no DOU nº 26, de 06/02/2009, pág. 100) estabelece em seu art. 6º um <bdi style="font-weight:bold">Diâmetro Mínimo de Corte (DMC) de 50 cm</bdi> para todas as espécies, para as quais ainda não se estabeleceu o DMC específico.
+]
+
+---
+# Operadores lógicos
+
+## Operador `&` - versão vetorizada (cont.)
+
++ Quais árvores possuem <bdi style="font-weight:bold">cipós ausentes</bdi>, <bdi style="font-weight:bold">QF igual a 1</bdi> `e` <bdi style="font-weight:bold">DAP maior ou igual a 50cm</bdi>?
 
 ```{r operE2, echo=TRUE, eval=FALSE}
 dt$Cipo == "Não" & dt$QF == 1 & dt$DAP >= 50
@@ -767,12 +791,16 @@ dt$Cipo == "Não" & dt$QF == 1 & dt$DAP >= 50
 ```{r ref.label="operE2", echo=FALSE, eval=TRUE, collapse=T}
 ```
 
++ Quais árvores estão selecionadas para <bdi style="font-weight:bold">explorar</bdi> `e` possuem <bdi style="font-weight:bold">QF igual a 1</bdi>?
 
----
+```{r operE3, echo=TRUE, eval=FALSE}
+dt$Selecao == "Explorar" & dt$QF == 1
+```
+
+```{r ref.label="operE3", echo=FALSE, eval=TRUE, collapse=T}
+```
+
 + Quais árvores possuem <bdi style="font-weight:bold">DAP maior do que 50cm</bdi> `e` <bdi style="font-weight:bold">podem ser exploradas</bdi> (cortadas)?
-
-+ Baseado no Diâmetro Mínimo de Corte (DMC) estabelecido no art. 6º da [Resolução CONAMA nº 406 de 02/02/2009](http://www2.mma.gov.br/port/conama/legiabre.cfm?codlegi=597) (Publicado no DOU nº 26, de 06/02/2009, pág. 100) quais árvores são passíveis de corte (exploração) legal (considerando a inexistência de outros impedimentos!)?
-
 
 ```{r , echo=TRUE, eval=FALSE}
 DAP >= 50 & Cortar == "Sim"
@@ -780,7 +808,6 @@ DAP >= 50 & Cortar == "Sim"
 
 ```{r ref.label="operE", echo=FALSE, eval=TRUE, collapse=T}
 ```
-
 
 ---
 # Operadores lógicos
