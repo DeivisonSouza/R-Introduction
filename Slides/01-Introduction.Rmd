@@ -72,7 +72,7 @@ style_mono_accent(
 
 # 👋 Olá, sejam bem vindos!
 
-## <bdi style="color:magenta;">1. Sobre o instrutor</bdi>
+## <bdi style="color:magenta;">1. Sobre o facilitador</bdi>
 
 .pull-left[
 * <bdi style="font-weight:bold">Graduação (Titulação: ano 2008)</bdi>
@@ -721,7 +721,7 @@ Em programação, estes operadores são usados para realizar `operações lógic
 .right-column[
 ```{r , echo=FALSE, eval=TRUE}
 
-dt <- data.frame(
+data <- data.frame(
   Especie = c("Swietenia macrophylla", "Swietenia macrophylla", "Swietenia macrophylla", "Hymenolobium petraeum","Hymenolobium petraeum", "Hymenolobium petraeum", "Hymenolobium petraeum","Hymenolobium petraeum", "Swietenia macrophylla", "Swietenia macrophylla"),
               DAP = c(33.6, 42.6, 52.1, 80.3, 90.8,
                       49.4, 70.5, 100.5, 60.7, 27.1),
@@ -734,7 +734,7 @@ dt <- data.frame(
                           "Remanescente", "Explorar", "Remanescente","Protegida", "Protegida"),
   stringsAsFactors = T)
 
-dt %>% 
+data %>% 
    DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
                  class = "display", width = '350px',
                  caption = 'Dados fictícios para 10 árvores de duas espécies florestais.',
@@ -751,6 +751,30 @@ dt %>%
 ]
 
 ---
+# Momento Spoiler 😁 🙊
+
+## Importação de dados no R
+
++ A tabela com dados fictícios servirá para praticar os operadores lógicos. 
+
++ No entanto, para que todos possam praticar é necessário construir a tabela ou simplesmente carregá-la, caso os dados estejam tabulados em alguma planilha. Mas, usaremos a segunda opção!
+
++ Para carregar dados no R existem diversas funções disponíveis. 
+
++ Estudaremos a função `read_csv()` do pacote <bdi style="font-weight:bold; color:magenta;">readr</bdi>.
+
++ Essa função é usada para importar dados em planilhas `.csv` (comma-separated values). 
+
+---
+# Momento Spoiler 😁 🙊
+
+## Importação de dados no R
+
+```{r data1, eval=TRUE, collapse=TRUE, message = FALSE}
+(data <- read_csv("../Data/data1.csv"))
+```
+
+---
 # Operadores lógicos
 
 ## Operador `&` - versão vetorizada
@@ -762,7 +786,7 @@ Use o operador lógico `&` para responder as questões a seguir:
 --
 
 ```{r operE, echo=TRUE, eval=FALSE}
-dt$DAP >= 50 & dt$QF == 1
+data$DAP >= 50 & data$QF == 1
 ```
 
 --
@@ -784,30 +808,138 @@ A [Resolução CONAMA nº 406 de 02/02/2009](http://www2.mma.gov.br/port/conama/
 
 ✍ Quais árvores possuem <bdi style="font-weight:bold">cipós ausentes</bdi>, <bdi style="font-weight:bold">QF igual a 1</bdi> `e` <bdi style="font-weight:bold">DAP maior ou igual a 50cm</bdi>❓
 
+--
+
 ```{r operE2, echo=TRUE, eval=FALSE}
-dt$Cipo == "Não" & dt$QF == 1 & dt$DAP >= 50
+data$Cipo == "Não" & data$QF == 1 & data$DAP >= 50
 ```
+
+--
 
 ```{r ref.label="operE2", echo=FALSE, eval=TRUE, collapse=T}
 ```
 
-+ Quais árvores estão selecionadas para <bdi style="font-weight:bold">explorar</bdi> `e` possuem <bdi style="font-weight:bold">QF igual a 1</bdi>?
+--
+✍ Quais árvores estão selecionadas para <bdi style="font-weight:bold">explorar</bdi> `e` <bdi style="font-weight:bold">QF igual a 1</bdi>❓
 
+--
 ```{r operE3, echo=TRUE, eval=FALSE}
-dt$Selecao == "Explorar" & dt$QF == 1
+data$Selecao == "Explorar" & data$QF == 1
 ```
 
+--
 ```{r ref.label="operE3", echo=FALSE, eval=TRUE, collapse=T}
 ```
 
-+ Quais árvores possuem <bdi style="font-weight:bold">DAP maior do que 50cm</bdi> `e` <bdi style="font-weight:bold">podem ser exploradas</bdi> (cortadas)?
+---
+# Operadores lógicos
 
-```{r , echo=TRUE, eval=FALSE}
-DAP >= 50 & Cortar == "Sim"
-```
+## Um quadro síntese
 
-```{r ref.label="operE", echo=FALSE, eval=TRUE, collapse=T}
-```
+.pull-left[
+
+## .center[Operador `&`]
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#bbb;border-spacing:0;}
+.tg td{background-color:#E0FFEB;border-color:#bbb;border-style:solid;border-width:1px;color:#594F4F;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#9DE0AD;border-color:#bbb;border-style:solid;border-width:1px;color:#493F3F;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-75bc{background-color:#efefef;border-color:inherit;color:#32cb00;text-align:center;vertical-align:top}
+.tg .tg-5986{background-color:#ffffff;border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-v0hj{background-color:#efefef;border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-2y3c{background-color:#ffffff;border-color:inherit;color:#32cb00;text-align:center;vertical-align:top}
+.tg .tg-kv1i{background-color:#efefef;border-color:inherit;color:#fe0000;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-l5hg{background-color:#ffffff;border-color:inherit;color:#fe0000;font-weight:bold;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-v0hj">Expressão 1</th>
+    <th class="tg-v0hj">Expressão 2</th>
+    <th class="tg-v0hj">Expressão 1 &amp; Expressão 2</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-5986"><span style="font-weight:bold;color:#32CB00">TRUE</span></td>
+    <td class="tg-2y3c"><span style="font-weight:700;font-style:normal">TRUE</span></td>
+    <td class="tg-2y3c"><span style="font-weight:700;font-style:normal">TRUE</span></td>
+  </tr>
+  <tr>
+    <td class="tg-75bc"><span style="font-weight:700;font-style:normal">TRUE</span></td>
+    <td class="tg-kv1i">FALSE</td>
+    <td class="tg-kv1i"><span style="font-weight:700;font-style:normal;color:#FE0000">FALSE</span></td>
+  </tr>
+  <tr>
+    <td class="tg-l5hg">FALSE</td>
+    <td class="tg-2y3c"><span style="font-weight:700;font-style:normal">TRUE</span></td>
+    <td class="tg-l5hg"><span style="font-weight:700;font-style:normal;color:#FE0000">FALSE</span></td>
+  </tr>
+  <tr>
+    <td class="tg-kv1i">FALSE</td>
+    <td class="tg-kv1i">FALSE</td>
+    <td class="tg-kv1i">FALSE</td>
+  </tr>
+</tbody>
+</table>
+]
+
+.pull-right[
+## .center[Operador `|`]
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#bbb;border-spacing:0;}
+.tg td{background-color:#E0FFEB;border-color:#bbb;border-style:solid;border-width:1px;color:#594F4F;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#9DE0AD;border-color:#bbb;border-style:solid;border-width:1px;color:#493F3F;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-75bc{background-color:#efefef;border-color:inherit;color:#32cb00;text-align:center;vertical-align:top}
+.tg .tg-5986{background-color:#ffffff;border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-v0hj{background-color:#efefef;border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-2y3c{background-color:#ffffff;border-color:inherit;color:#32cb00;text-align:center;vertical-align:top}
+.tg .tg-kv1i{background-color:#efefef;border-color:inherit;color:#fe0000;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-l5hg{background-color:#ffffff;border-color:inherit;color:#fe0000;font-weight:bold;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-v0hj">Expressão 1</th>
+    <th class="tg-v0hj">Expressão 2</th>
+    <th class="tg-v0hj">Expressão 1 | Expressão 2</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-5986"><span style="font-weight:bold;color:#32CB00">TRUE</span></td>
+    <td class="tg-2y3c"><span style="font-weight:700;font-style:normal">TRUE</span></td>
+    <td class="tg-2y3c"><span style="font-weight:700;font-style:normal">TRUE</span></td>
+  </tr>
+  <tr>
+    <td class="tg-75bc"><span style="font-weight:700;font-style:normal">TRUE</span></td>
+    <td class="tg-kv1i">FALSE</td>
+    <td class="tg-kv1i"><span style="font-weight:700;font-style:normal;color:#32CB00">TRUE</span></td>
+  </tr>
+  <tr>
+    <td class="tg-l5hg">FALSE</td>
+    <td class="tg-2y3c"><span style="font-weight:700;font-style:normal">TRUE</span></td>
+    <td class="tg-l5hg"><span style="font-weight:700;font-style:normal;color:#32CB00">TRUE</span></td>
+  </tr>
+  <tr>
+    <td class="tg-kv1i">FALSE</td>
+    <td class="tg-kv1i">FALSE</td>
+    <td class="tg-kv1i">FALSE</td>
+  </tr>
+</tbody>
+</table>
+]
+<br>
+.bg-washed-near-white.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
++ Operador `&`: A resposta será `TRUE` apenas quando todas as operações forem `TRUE`, caso contrário será `FALSE`.
+
++ Operador `|`: A resposta será `TRUE` quando pelo menos uma operação for `TRUE`, caso contrário será `FALSE`.
+]
 
 ---
 # Operadores lógicos
