@@ -1,6 +1,8 @@
 ---
-title: "Linguagem de programação R"
-subtitle: "(uma introdução para iniciantes)"
+title: |
+  | Linguagem de programação R:
+  | uma introdução para iniciantes
+subtitle: "Instalação, operadores e funções matemáticas"
 author: "Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
 date: |
@@ -551,9 +553,8 @@ Acesse o R-script:]
 
 [01-R-Operators](https://deivisonsouza.github.io/R-Introduction/R-scripts/01-R-Operators.R)]
 
-<div style="font-size:7pt">
+
 .left[.footnote[.black[Imagem de] <a href="https://pixabay.com/pt/users/Erik_Karits-15012370/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4808774">Erik Karits</a> .black[por] <a href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4808774">Pixabay</a>️]]
-</div>
 
 ---
 name: arit
@@ -999,6 +1000,19 @@ x >= 3 && y <= 50
 ```
 ]
 
+---
+class: center, inverse, middle
+background-image: url(fig/imgD.jpg)
+background-size: cover
+
+# .right[.black[FUNÇÕES MATEMÁTICAS]]
+
+.right[.black[
+Acesse o R-script:]
+
+[01-R-Operators](https://deivisonsouza.github.io/R-Introduction/R-scripts/01-R-Operators.R)]
+
+.left[.footnote[Imagem de <a href="https://pixabay.com/pt/users/lucasgeorgewendt-15638399/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5300030">Lucas Wendt</a> por <a href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5300030">Pixabay</a>️]]
 
 ---
 name: FunsMat
