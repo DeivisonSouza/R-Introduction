@@ -540,6 +540,10 @@ class: center, inverse, middle
 </table>
 
 ---
+[01-IniciandoNoR](https://deivisonsouza.github.io/R-Introduction/R-scripts/01-IniciandoNoR.R)
+
+
+---
 name: arit
 
 # Operadores aritméticos - Expressões básicas
