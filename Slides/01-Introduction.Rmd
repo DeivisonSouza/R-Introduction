@@ -549,7 +549,7 @@ background-size: cover
 .left[.black[
 Acesse o R-script:]
 
-[01-Starting-with-R](https://deivisonsouza.github.io/R-Introduction/R-scripts/01-Starting-with-R.R)]
+[01-R-Operators](https://deivisonsouza.github.io/R-Introduction/R-scripts/01-R-Operators.R)]
 
 <div style="font-size:7pt">
 .left[.footnote[.black[Imagem de] <a href="https://pixabay.com/pt/users/Erik_Karits-15012370/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4808774">Erik Karits</a> .black[por] <a href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4808774">Pixabay</a>️]]
