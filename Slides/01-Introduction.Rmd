@@ -542,19 +542,18 @@ class: center, inverse, middle
 </table>
 
 ---
-class: center, inverse, middle
+class: right, inverse, bottom
 background-image: url(fig/imgC.jpg)
 background-size: cover
 
-# .left[.black[OPERADORES NO R]]
+# .black[OPERADORES NO R]
 
-.left[.black[
+.right[.black[
 Acesse o R-script:]
 
 [01-R-Operators](https://deivisonsouza.github.io/R-Introduction/R-scripts/01-R-Operators.R)]
 
-
-.left[.footnote[.black[Imagem de] <a href="https://pixabay.com/pt/users/Erik_Karits-15012370/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4808774">Erik Karits</a> .black[por] <a href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4808774">Pixabay</a>️]]
+.left[.footnote[Créditos: Imagem de .green[Willas Soares].]]
 
 ---
 name: arit
