@@ -4,10 +4,10 @@
     <title>01-Introduction.utf8</title>
     <meta charset="utf-8" />
     <meta name="author" content="Deivison Venicio Souza" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
     <link href="libs/remark-css/tamu-fonts.css" rel="stylesheet" />
-    <script src="libs/xaringanExtra-logo/logo.js"></script>
     <link href="libs/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
     <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
@@ -35,7 +35,7 @@ uma introdução para iniciantes</div>
 ## Instalação, operadores e funções matemáticas
 ### Deivison Venicio Souza
 ### Universidade Federal do Pará (UFPA)
-### <p>22/setembro/2020 | Altamira, Pará</p>
+### <p>27/março/2021 | Altamira, Pará</p>
 
 ---
 
@@ -44,20 +44,50 @@ name: toc
 
 
 
-<style type="text/css">
-.xaringan-extra-logo {
-  width: 140px;
-  height: 140px;
-  z-index: 0;
-  background-image: url('fig/ufpa.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  top:.8em;right:1em;
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 140px;
+height: 140px;
+z-index: 0;
+background-image: url(fig/ufpa.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:.8em;right:1em;
 }
-</style><style>.panelset {
-  --panel-tab-color-active: red;
-}</style>
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+```
+## Warning: 'style_panelset' is deprecated.
+## Use 'style_panelset_tabs' instead.
+## See help("Deprecated")
+```
+
+```
+## Warning in style_panelset_tabs(...): The arguments to `syle_panelset()` changed
+## in xaringanExtra 0.1.0. Please refer to the documentation to update your slides.
+```
 
 
 
@@ -363,7 +393,7 @@ citation()
 ## 
 ## To cite R in publications use:
 ## 
-*##   R Core Team (2020). R: A language and environment for statistical
+*##   R Core Team (2021). R: A language and environment for statistical
 *##   computing. R Foundation for Statistical Computing, Vienna, Austria.
 *##   URL https://www.R-project.org/.
 ## 
@@ -374,7 +404,7 @@ citation()
 *##     author = {{R Core Team}},
 *##     organization = {R Foundation for Statistical Computing},
 *##     address = {Vienna, Austria},
-*##     year = {2020},
+*##     year = {2021},
 *##     url = {https://www.R-project.org/},
 *##   }
 ## 
@@ -827,8 +857,8 @@ Em programação, estes operadores são usados para realizar `operações lógic
 ]
 
 .right-column[
-<div id="htmlwidget-144c041108f11a06bd36" style="width:350px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-144c041108f11a06bd36">{"x":{"filter":"none","caption":"<caption>Dados fictícios para 10 árvores de duas espécies florestais.<\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["Swietenia macrophylla","Swietenia macrophylla","Swietenia macrophylla","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Swietenia macrophylla","Swietenia macrophylla"],[33.6,42.6,52.1,80.3,90.8,49.4,70.5,100.5,60.7,27.1],[9.1,13.2,15.4,18.6,19.5,16.8,17.9,22.4,15.3,8.7],["Sim","Não","Sim","Não","Sim","Não","Sim","Não","Sim","Sim"],[2,1,3,1,2,1,2,3,1,3],["Protegida","Protegida","Protegida","Explorar","Explorar","Remanescente","Explorar","Remanescente","Protegida","Protegida"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Especie<\/th>\n      <th>DAP<\/th>\n      <th>H<\/th>\n      <th>Cipo<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":true,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-38ec06935d98f162b3dd" style="width:350px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-38ec06935d98f162b3dd">{"x":{"filter":"none","caption":"<caption>Dados fictícios para 10 árvores de duas espécies florestais.<\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["Swietenia macrophylla","Swietenia macrophylla","Swietenia macrophylla","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Swietenia macrophylla","Swietenia macrophylla"],[33.6,42.6,52.1,80.3,90.8,49.4,70.5,100.5,60.7,27.1],[9.1,13.2,15.4,18.6,19.5,16.8,17.9,22.4,15.3,8.7],["Sim","Não","Sim","Não","Sim","Não","Sim","Não","Sim","Sim"],[2,1,3,1,2,1,2,3,1,3],["Protegida","Protegida","Protegida","Explorar","Explorar","Remanescente","Explorar","Remanescente","Protegida","Protegida"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Especie<\/th>\n      <th>DAP<\/th>\n      <th>H<\/th>\n      <th>Cipo<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":true,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 
 ]
 
@@ -1274,6 +1304,7 @@ class: center, inverse, middle
 # Obrigado!
 ## .center[&amp;#127795; Deivison Venicio Souza &amp;#127795;]
 (deivisonvs@ufpa.br)
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -1666,6 +1697,8 @@ hr, .mline h1::after {
 
 
 </style>
+
+
 
 <script>
 slideshow._releaseMath = function(el) {
