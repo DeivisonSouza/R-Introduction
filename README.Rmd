@@ -49,7 +49,7 @@ list_github_files <- function(repo, dir = NULL, ext = NULL) {
 }
 ```
 
-# Seja bem vindo(a)! :smiley: :grin:
+# Seja bem vindo(a)! :smiley: :grin: :smiley:
 
 :calendar: **26, 27 de Novembro e 03, 04, 10 de Dezembro, 2020**
 

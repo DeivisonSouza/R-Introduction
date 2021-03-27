@@ -1,9 +1,8 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
 <!-- Emprestei a função list_github_files() da Curso-R (https://github.com/curso-r). Na verdade a ideia por trás desse readme emprestei da Curso-R. Achei excelente!-->
 
-# Seja bem vindo(a)\! :smiley: :grin:
+# Seja bem vindo(a)! :smiley: :grin: :smiley:
 
 :calendar: **26, 27 de Novembro e 03, 04, 10 de Dezembro, 2020**
 
@@ -14,10 +13,8 @@
 [2](https://deivisonsouza.github.io/R-Introduction/Slides/02-Objects.html)
 
 <div>
-
 <img src="Slides/fig/ufpa.png" width="100" align="middle" class="center">
 <img src="Slides/fig/floresta.png" width="100" align="middle" class="center">
-
 <div>
 
 # Descrição
@@ -30,8 +27,8 @@ para análise de dados e aplicação de métodos. Particularmente, este
 curso constitui uma atividade complementar no âmbito do **Ensino Remoto
 Emergencial (ERE)** na [Universidade Federal do Pará
 (UFPA)](https://portal.ufpa.br/index.php), conforme dispõe a [Resolução
-n. 5.294, de 21 de agosto
-de 2020](http://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2020/Resolucao_5294_2020_CONSEPE.pdf).
+n. 5.294, de 21 de agosto de
+2020](http://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2020/Resolucao_5294_2020_CONSEPE.pdf).
 Este curso foi elaborado para atender aos discentes regularmente
 matriculados no curso de graduação em
 <bdi style="font-weight:bold;color:green;">Engenharia Florestal da
@@ -46,7 +43,7 @@ programação R: uma introdução para iniciantes** estão disponíveis a
 seguir.
 
 | Slide                       | Link                                                                         |
-| :-------------------------- | :--------------------------------------------------------------------------- |
+|:----------------------------|:-----------------------------------------------------------------------------|
 | Slides/01-Introduction.html | <https://deivisonsouza.github.io/R-Introduction/Slides/01-Introduction.html> |
 | Slides/02-Objects.html      | <https://deivisonsouza.github.io/R-Introduction/Slides/02-Objects.html>      |
 
